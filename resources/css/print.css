@@ -1,0 +1,64 @@
+body {
+  color: black;
+  font-family: Tahoma;
+  font-size: 10pt;
+}
+#page {
+  width: 1050;
+  height: 1485;
+}
+#timeline {
+  display: table;
+  width: 600;
+  float: left;
+}
+#timeline #item {
+  border-left: 10;
+  border-left-style: solid;
+  position: relative;
+  padding-bottom: 5;
+}
+#timeline #item .stop {
+  width: 14;
+  height: 14;
+  left: -12;
+  top: -2;
+  position: absolute;
+}
+
+#timeline #item h3 {
+  position: relative;
+  font-size: 10pt;
+  left: 5;
+  margin: 0;
+}
+
+#timeline #item p {
+  font-size: 8pt;
+  font-weight: normal;
+  position: relative;
+  margin: 0;
+  left: 5;
+}
+#skills {
+  width: 450;
+  float: left;
+}
+#skills .skillrow {
+  width: 450;
+  height: 10;
+  clear: both;
+}
+#skills .skillrow p {
+  float: left;
+  font-size: 8pt;
+  font-weight: normal;
+  width: 150;
+  margin: 0;
+}
+
+#skills .skillrow svg {
+  float: left;
+  margin-right: 10;
+  width: 50;
+}
