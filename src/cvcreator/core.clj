@@ -3,7 +3,10 @@
         c2.svg)
   (:require [clj-yaml.core :as yaml]
             [c2.scale :as scale]
-            [cvcreator.css :as css]))
+            [cvcreator.css :as css]
+            [com.evocomputing.colors.palettes.core :as core-palettes]
+            [com.evocomputing.colors.palettes.color-brewer :as colour-brewer]
+            [com.evocomputing.colors :as colours]))
 
 ;; Get the raw data for the cv
 (defn cv-raw [] (slurp "input/cv.yml"))
@@ -15,9 +18,10 @@
 (defn timeline [data]
   [:div#timeline
    [:h2 "Timeline"
-    (unify data
-           (fn [{:keys [period location activity]}]
-             [:div#item
+    (unify (concat (map #(merge {:last? false} %1) (butlast data))
+                   (list (merge {:last? true} (last data))))
+           (fn [{:keys [period location activity last?]}]
+             [(if last? :div#lastitem :div.item)
               [:svg.stop {:viewBox "0 0 12 12"} 
                [:circle {:cx 6 :cy 6 :r 5 :style (style {:stroke-width 2 :stroke "black" :fill "pink"})}]]
               [:h3 period]
@@ -35,18 +39,38 @@
                      {:fill filled-color}
                      {:fill unfilled-color}))}]))))
 
-(defn skills [data]
-  [:div#skills
-   [:h2 "Skills"
-    (unify data
-           (fn [{:keys [skill ability enjoyment]}]
-             [:div.skillrow 
+
+(defn skill-rows [colour data]
+  (unify data
+         (fn [{:keys [skill ability enjoyment]}]
+           [:div.skillrow 
               [:p skill]
-              [:svg 
-               (make-circles {:size 8 :filled-color "pink" :number 5 :number-filled ability})]
-              [:svg 
-               (make-circles {:size 8 :filled-color "red" :number 5 :number-filled enjoyment})]]))]])
-            
+            [:svg 
+             (make-circles {:size 8 :filled-color (colours/rgb-hexstr colour) :number 5 :number-filled ability})]
+            [:svg 
+             (make-circles {:size 8 :filled-color (colours/rgb-hexstr colour) :number 5 :number-filled enjoyment})]])))
+
+(defn skills [data]
+  (let [ng (count data)
+        colours (into [] (core-palettes/rainbow-hsl ng))]
+    [:div#skills
+     [:h2 "Skills"
+      (unify (map-indexed vector data)
+             (fn [[idx {:keys [group skills]}]]
+               [:div.group
+                [:h3 group]
+                [:div.skillrows
+                 (skill-rows (colours idx) skills)]]))]]))
+
+
+(defn contact [data]
+  [:div#contact
+   (unify data
+          (fn [{:keys [method details]}]
+            [:div.contactrow
+             [:h2 method]
+             [:p details]]))])  
+
 
 (defn make-cv [& {:keys [mode] :or {mode "print"}}]
   (do
@@ -58,11 +82,10 @@
              (slurp (str "resources/css/" mode ".css"))]]
            [:body
             [:div#page
+             [:h1 (:name (cv-data))]
+             (contact (:contact (cv-data)))
              (timeline (:timeline (cv-data)))
              (skills (:skills (cv-data)))]]))))
-
-
-
 
 
 

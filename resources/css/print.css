@@ -6,19 +6,48 @@ body {
 #page {
   width: 1050;
   height: 1485;
+  border-style: solid;
+}
+#page h1 {
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  float: left;
+}
+#contact {
+  float: right;
+}
+#contact h2 {
+  margin: 0;
+  padding: 0;
+  float: left;
+  font-size: 8pt;
+}
+
+#contact p {
+  margin: 0;
+  padding: 0;
+  float: left;
+  font-size: 8pt;
+}
+
+#contact .contactrow {
+  clear: both;
+  margin: 0 0 0 5;
 }
 #timeline {
   display: table;
-  width: 600;
+  width: 40%;
+  margin: 5%;
   float: left;
+  clear: both;
 }
-#timeline #item {
-  border-left: 10;
-  border-left-style: solid;
+#timeline #lastitem {
+  border-left-style: none;
   position: relative;
-  padding-bottom: 5;
+  margin-left: 10;
 }
-#timeline #item .stop {
+#timeline #lastitem .stop {
   width: 14;
   height: 14;
   left: -12;
@@ -26,14 +55,43 @@ body {
   position: absolute;
 }
 
-#timeline #item h3 {
+#timeline #lastitem h3 {
   position: relative;
   font-size: 10pt;
   left: 5;
   margin: 0;
 }
 
-#timeline #item p {
+#timeline #lastitem p {
+  font-size: 8pt;
+  font-weight: normal;
+  position: relative;
+  margin: 0;
+  left: 5;
+}
+
+#timeline .item {
+  border-left: 10;
+  border-left-style: solid;
+  position: relative;
+  padding-bottom: 5;
+}
+#timeline .item .stop {
+  width: 14;
+  height: 14;
+  left: -12;
+  top: -2;
+  position: absolute;
+}
+
+#timeline .item h3 {
+  position: relative;
+  font-size: 10pt;
+  left: 5;
+  margin: 0;
+}
+
+#timeline .item p {
   font-size: 8pt;
   font-weight: normal;
   position: relative;
@@ -41,24 +99,37 @@ body {
   left: 5;
 }
 #skills {
-  width: 450;
+  width: 40%;
+  margin: 5%;
   float: left;
 }
-#skills .skillrow {
-  width: 450;
+#skills .group {
+  float: left;
+}
+#skills .group h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 8pt;
+}
+
+#skills .group .skillrows {
+  border-top-style: solid;
+}
+
+#skills .group .skillrow {
   height: 10;
+  width: 100%;
   clear: both;
 }
-#skills .skillrow p {
+#skills .group .skillrow p {
   float: left;
   font-size: 8pt;
   font-weight: normal;
-  width: 150;
+  width: 50%;
   margin: 0;
 }
 
-#skills .skillrow svg {
+#skills .group .skillrow svg {
   float: left;
-  margin-right: 10;
-  width: 50;
+  width: 25%;
 }

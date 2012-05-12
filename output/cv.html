@@ -6,19 +6,48 @@
 #page {
   width: 1050;
   height: 1485;
+  border-style: solid;
+}
+#page h1 {
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  float: left;
+}
+#contact {
+  float: right;
+}
+#contact h2 {
+  margin: 0;
+  padding: 0;
+  float: left;
+  font-size: 8pt;
+}
+
+#contact p {
+  margin: 0;
+  padding: 0;
+  float: left;
+  font-size: 8pt;
+}
+
+#contact .contactrow {
+  clear: both;
+  margin: 0 0 0 5;
 }
 #timeline {
   display: table;
-  width: 600;
+  width: 40%;
+  margin: 5%;
   float: left;
+  clear: both;
 }
-#timeline #item {
-  border-left: 10;
-  border-left-style: solid;
+#timeline #lastitem {
+  border-left-style: none;
   position: relative;
-  padding-bottom: 5;
+  margin-left: 10;
 }
-#timeline #item .stop {
+#timeline #lastitem .stop {
   width: 14;
   height: 14;
   left: -12;
@@ -26,14 +55,43 @@
   position: absolute;
 }
 
-#timeline #item h3 {
+#timeline #lastitem h3 {
   position: relative;
   font-size: 10pt;
   left: 5;
   margin: 0;
 }
 
-#timeline #item p {
+#timeline #lastitem p {
+  font-size: 8pt;
+  font-weight: normal;
+  position: relative;
+  margin: 0;
+  left: 5;
+}
+
+#timeline .item {
+  border-left: 10;
+  border-left-style: solid;
+  position: relative;
+  padding-bottom: 5;
+}
+#timeline .item .stop {
+  width: 14;
+  height: 14;
+  left: -12;
+  top: -2;
+  position: absolute;
+}
+
+#timeline .item h3 {
+  position: relative;
+  font-size: 10pt;
+  left: 5;
+  margin: 0;
+}
+
+#timeline .item p {
   font-size: 8pt;
   font-weight: normal;
   position: relative;
@@ -41,31 +99,47 @@
   left: 5;
 }
 #skills {
-  width: 450;
+  width: 40%;
+  margin: 5%;
   float: left;
 }
-#skills .skillrow {
-  width: 450;
+#skills .group {
+  float: left;
+}
+#skills .group h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 8pt;
+}
+
+#skills .group .skillrows {
+  border-top-style: solid;
+}
+
+#skills .group .skillrow {
   height: 10;
+  width: 100%;
   clear: both;
 }
-#skills .skillrow p {
+#skills .group .skillrow p {
   float: left;
   font-size: 8pt;
   font-weight: normal;
-  width: 150;
+  width: 50%;
   margin: 0;
 }
 
-#skills .skillrow svg {
+#skills .group .skillrow svg {
   float: left;
-  margin-right: 10;
-  width: 50;
+  width: 25%;
 }
-</style></head><body><div id="page"><div id="timeline"><h2>Timeline<div id="item"><svg class="stop" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" style="fill:pink;stroke:black;stroke-width:2px;" /></svg><h3>2008-2009</h3><p>Was in Portugal doing a Summer Academy, then at Climate Camp runnning a workshop on Energy Plans that Add up, based on David MacKay's book
-</p></div><div id="item"><svg class="stop" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" style="fill:pink;stroke:black;stroke-width:2px;" /></svg><h3>2004-2008</h3><p>Higher Education
+</style></head><body><div id="page"><h1>Daniel Neal</h1><div id="contact"><div class="contactrow"><h2>mobile</h2><p>07763 468398</p></div><div class="contactrow"><h2>email</h2><p>danielneal2@gmail.com</p></div><div class="contactrow"><h2>post</h2><p>38 Springfield Mill, Sandiacre, Derbyshire, NG10 5QD</p></div></div><div id="timeline"><h2>Timeline<div class="item"><svg class="stop" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" style="fill:pink;stroke:black;stroke-width:2px;" /></svg><h3>2009 - 2012</h3><p>Worked at EvoEnergy. Joined when the company was 10 people strong, and carried out many roles from on-site installation of monitoring systems, to telephone support, sales and administration
+Following the introduction of the Feed-in Tariff in April 2010, became the company's Systems Developer, taking the information systems from a piece of paper and a whiteboard, to an excel spreadsheet, 
+then an Access Database, then a completely bespoke SQL database with VB.Net and WinForms front end, and finally, with a colleague, to a much
+</p></div><div class="item"><svg class="stop" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" style="fill:pink;stroke:black;stroke-width:2px;" /></svg><h3>2008 - 2009</h3><p>Was in Portugal doing a Summer Academy, then at Climate Camp runnning a workshop on Energy Plans that Add up, based on David MacKay's book
+</p></div><div class="item"><svg class="stop" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" style="fill:pink;stroke:black;stroke-width:2px;" /></svg><h3>2004 - 2008</h3><p>Higher Education
 Read Engineering at Emmanuel College, Cambridge, and gained
 a first class degree. Took an unconvential route through the course, studying the Mechanics, Structures, Thermofluids
-</p></div><div id="item"><svg class="stop" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" style="fill:pink;stroke:black;stroke-width:2px;" /></svg><h3>1984-1996</h3><p>Primary and Secondary Education
+</p></div><div class="item"><svg class="stop" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" style="fill:pink;stroke:black;stroke-width:2px;" /></svg><h3>1984 - 1996</h3><p>Primary and Secondary Education
 Attended Sir Roger Manwoods School, where I led the school orchestra, played in a string quartet, a jazz band, joined yndi halda, took some GCSEs
-</p></div><div id="item"><svg class="stop" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" style="fill:pink;stroke:black;stroke-width:2px;" /></svg><h3>December 1984</h3><p>Born</p></div></h2></div><div id="skills"><h2>Skills<div class="skillrow"><p>clojure</p><svg><circle cx="4" cy="4" r="4" style="fill:pink;" /><circle cx="14" cy="4" r="4" style="fill:pink;" /><circle cx="24" cy="4" r="4" style="fill:pink;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:red;" /><circle cx="14" cy="4" r="4" style="fill:red;" /><circle cx="24" cy="4" r="4" style="fill:red;" /><circle cx="34" cy="4" r="4" style="fill:red;" /><circle cx="44" cy="4" r="4" style="fill:red;" /></svg></div><div class="skillrow"><p>c#</p><svg><circle cx="4" cy="4" r="4" style="fill:pink;" /><circle cx="14" cy="4" r="4" style="fill:pink;" /><circle cx="24" cy="4" r="4" style="fill:lightgray;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:red;" /><circle cx="14" cy="4" r="4" style="fill:red;" /><circle cx="24" cy="4" r="4" style="fill:red;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg></div><div class="skillrow"><p>WPF</p><svg><circle cx="4" cy="4" r="4" style="fill:pink;" /><circle cx="14" cy="4" r="4" style="fill:lightgray;" /><circle cx="24" cy="4" r="4" style="fill:lightgray;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:red;" /><circle cx="14" cy="4" r="4" style="fill:red;" /><circle cx="24" cy="4" r="4" style="fill:lightgray;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg></div><div class="skillrow"><p>DOS batch file</p><svg><circle cx="4" cy="4" r="4" style="fill:pink;" /><circle cx="14" cy="4" r="4" style="fill:pink;" /><circle cx="24" cy="4" r="4" style="fill:pink;" /><circle cx="34" cy="4" r="4" style="fill:pink;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:red;" /><circle cx="14" cy="4" r="4" style="fill:lightgray;" /><circle cx="24" cy="4" r="4" style="fill:lightgray;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg></div><div class="skillrow"><p>French</p><svg><circle cx="4" cy="4" r="4" style="fill:pink;" /><circle cx="14" cy="4" r="4" style="fill:pink;" /><circle cx="24" cy="4" r="4" style="fill:lightgray;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:red;" /><circle cx="14" cy="4" r="4" style="fill:red;" /><circle cx="24" cy="4" r="4" style="fill:red;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg></div></h2></div></div></body>
+</p></div><div id="lastitem"><svg class="stop" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" style="fill:pink;stroke:black;stroke-width:2px;" /></svg><h3>December 1984</h3><p>Born</p></div></h2></div><div id="skills"><h2>Skills<div class="group"><h3>development</h3><div class="skillrows"><div class="skillrow"><p>WPF</p><svg><circle cx="4" cy="4" r="4" style="fill:#D98C8C;" /><circle cx="14" cy="4" r="4" style="fill:lightgray;" /><circle cx="24" cy="4" r="4" style="fill:lightgray;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:#D98C8C;" /><circle cx="14" cy="4" r="4" style="fill:#D98C8C;" /><circle cx="24" cy="4" r="4" style="fill:lightgray;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg></div></div></div><div class="group"><h3>language</h3><div class="skillrows"><div class="skillrow"><p>French</p><svg><circle cx="4" cy="4" r="4" style="fill:#B3D98C;" /><circle cx="14" cy="4" r="4" style="fill:#B3D98C;" /><circle cx="24" cy="4" r="4" style="fill:lightgray;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:#B3D98C;" /><circle cx="14" cy="4" r="4" style="fill:#B3D98C;" /><circle cx="24" cy="4" r="4" style="fill:#B3D98C;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg></div></div></div><div class="group"><h3>middleware</h3><div class="skillrows"><div class="skillrow"><p>clojure</p><svg><circle cx="4" cy="4" r="4" style="fill:#8CD9D9;" /><circle cx="14" cy="4" r="4" style="fill:#8CD9D9;" /><circle cx="24" cy="4" r="4" style="fill:#8CD9D9;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:#8CD9D9;" /><circle cx="14" cy="4" r="4" style="fill:#8CD9D9;" /><circle cx="24" cy="4" r="4" style="fill:#8CD9D9;" /><circle cx="34" cy="4" r="4" style="fill:#8CD9D9;" /><circle cx="44" cy="4" r="4" style="fill:#8CD9D9;" /></svg></div><div class="skillrow"><p>c#</p><svg><circle cx="4" cy="4" r="4" style="fill:#8CD9D9;" /><circle cx="14" cy="4" r="4" style="fill:#8CD9D9;" /><circle cx="24" cy="4" r="4" style="fill:lightgray;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:#8CD9D9;" /><circle cx="14" cy="4" r="4" style="fill:#8CD9D9;" /><circle cx="24" cy="4" r="4" style="fill:#8CD9D9;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg></div></div></div><div class="group"><h3>scripting</h3><div class="skillrows"><div class="skillrow"><p>DOS batch file</p><svg><circle cx="4" cy="4" r="4" style="fill:#B28CD9;" /><circle cx="14" cy="4" r="4" style="fill:#B28CD9;" /><circle cx="24" cy="4" r="4" style="fill:#B28CD9;" /><circle cx="34" cy="4" r="4" style="fill:#B28CD9;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:#B28CD9;" /><circle cx="14" cy="4" r="4" style="fill:lightgray;" /><circle cx="24" cy="4" r="4" style="fill:lightgray;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg></div></div></div></h2></div></div></body>
