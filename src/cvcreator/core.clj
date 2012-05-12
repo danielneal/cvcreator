@@ -16,16 +16,18 @@
 (def w3-svg "http://www.w3.org/2000/svg")
 
 (defn timeline [data]
-  [:div#timeline
-   [:h2 "Timeline"
-    (unify (concat (map #(merge {:last? false} %1) (butlast data))
-                   (list (merge {:last? true} (last data))))
-           (fn [{:keys [period location activity last?]}]
-             [(if last? :div#lastitem :div.item)
-              [:svg.stop {:viewBox "0 0 12 12"} 
-               [:circle {:cx 6 :cy 6 :r 5 :style (style {:stroke-width 2 :stroke "black" :fill "pink"})}]]
-              [:h3 period]
-              [:p activity]]))]])
+  (let [nt  (count data)
+        colours (into [] (core-palettes/heat-hsl nt))]
+    [:div#timeline
+     [:h2 "Timeline"
+      (unify (map-indexed vector data)
+             (fn [[idx {:keys [period location activity last?]}]]
+               [(if (= idx (dec nt)) :div#lastitem :div.item)
+                [:svg.stop {:viewBox "0 0 12 12"} 
+                 [:circle {:cx 6 :cy 6 :r 5
+                           :style (style {:stroke-width 2 :stroke "black" :fill (colours/rgb-hexstr (colours idx))})}]]
+                [:h3 period]
+                [:p activity]]))]]))
 
 (let [unfilled-color "lightgray"
       horizontal-spacing 2]
@@ -38,7 +40,6 @@
                    (if (< x number-filled)
                      {:fill filled-color}
                      {:fill unfilled-color}))}]))))
-
 
 (defn skill-rows [colour data]
   (unify data
@@ -54,13 +55,13 @@
   (let [ng (count data)
         colours (into [] (core-palettes/rainbow-hsl ng))]
     [:div#skills
-     [:h2 "Skills"
-      (unify (map-indexed vector data)
-             (fn [[idx {:keys [group skills]}]]
-               [:div.group
-                [:h3 group]
-                [:div.skillrows
-                 (skill-rows (colours idx) skills)]]))]]))
+     [:h2 "Skills"]
+     (unify (map-indexed vector data)
+            (fn [[idx {:keys [group skills]}]]
+              [:div.group
+               [:h3 group]
+               [:div.skillrows
+                (skill-rows (colours idx) skills)]]))]))
 
 
 (defn contact [data]
@@ -71,6 +72,23 @@
              [:h2 method]
              [:p details]]))])  
 
+
+(defn qualification-rows [data]
+  (unify data
+         (fn [{:keys [qualification result]}]
+           [:div.qualificationrow
+            [:p.qualification qualification]
+            [:p.result result]])))
+
+(defn qualifications [data]
+  [:div#qualifications
+   [:h2 "Qualifications"]
+   [:div#content
+    (unify data
+           (fn [{:keys [group qualifications]}]
+             [:div.group
+              [:h3 group]
+              (qualification-rows qualifications)]))]])
 
 (defn make-cv [& {:keys [mode] :or {mode "print"}}]
   (do
@@ -83,9 +101,12 @@
            [:body
             [:div#page
              [:h1 (:name (cv-data))]
+             [:div#about [:p (:about (cv-data))]]
+             [:img {:src (:picture (cv-data))}]
              (contact (:contact (cv-data)))
              (timeline (:timeline (cv-data)))
-             (skills (:skills (cv-data)))]]))))
+             (skills (:skills (cv-data)))
+             (qualifications (:qualifications (cv-data)))]]))))
 
 
 

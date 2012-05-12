@@ -6,16 +6,38 @@ body {
 #page {
   width: 1050;
   height: 1485;
-  border-style: solid;
 }
-#page h1 {
-  margin: 0;
-  padding: 0;
-  width: 20%;
+h1 {
+  width: 40%;
+  margin-left: 5%;
+  margin-right: 5%;
   float: left;
 }
-#contact {
+#about {
+  width: 40%;
+  float: left;
+  clear: left;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+#about p {
+  margin: 0;
+  padding: 0;
+  float: left;
+  font-size: 8pt;
+}
+img {
+  width: 15%;
+  margin-left: 5%;
+  margin-right: 5%;
   float: right;
+}
+#contact {
+  float: left;
+  width: 15%;
+  align: bottom;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 #contact h2 {
   margin: 0;
@@ -25,27 +47,28 @@ body {
 }
 
 #contact p {
+  clear: left;
+  font-size: 8pt;
   margin: 0;
   padding: 0;
-  float: left;
-  font-size: 8pt;
 }
 
 #contact .contactrow {
+  margin-top: 5;
   clear: both;
-  margin: 0 0 0 5;
 }
 #timeline {
   display: table;
   width: 40%;
-  margin: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
   float: left;
   clear: both;
 }
 #timeline #lastitem {
   border-left-style: none;
   position: relative;
-  margin-left: 10;
+  margin-left: 10px;
 }
 #timeline #lastitem .stop {
   width: 14;
@@ -71,10 +94,10 @@ body {
 }
 
 #timeline .item {
-  border-left: 10;
+  border-left: 10px;
   border-left-style: solid;
   position: relative;
-  padding-bottom: 5;
+  padding-bottom: 3%;
 }
 #timeline .item .stop {
   width: 14;
@@ -100,11 +123,15 @@ body {
 }
 #skills {
   width: 40%;
-  margin: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
   float: left;
 }
 #skills .group {
   float: left;
+  clear: both;
+  margin-bottom: 10;
+  width: 100%;
 }
 #skills .group h3 {
   margin: 0;
@@ -131,5 +158,45 @@ body {
 
 #skills .group .skillrow svg {
   float: left;
+  height: 100%;
   width: 25%;
+}
+#qualifications {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  float: left;
+}
+#qualifications h2 {
+  float: left;
+  clear: both;
+}
+
+#qualifications #content {
+  float: left;
+  width: 100%;
+}
+
+#qualifications .group {
+  float: left;
+  width: 27%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+#qualifications p {
+  margin: 0;
+  padding: 0;
+  font-size: 8pt;
+}
+#qualifications p.result {
+  color: gray;
+  float: right;
+}
+
+#qualifications p.qualification {
+  float: left;
+  margin: 0 10 0 0;
+  font-weight: bold;
+  clear: both;
 }

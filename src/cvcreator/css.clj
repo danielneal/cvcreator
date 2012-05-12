@@ -7,6 +7,11 @@
    :margin 0
    :padding 0))
 
+(defn horizontal-space [width]
+  (mixin
+   :margin-left width
+   :margin-right width))
+
 (def timeline-item
   (mixin
    (rule ".stop"
@@ -35,57 +40,75 @@
                   :color :black
                   :font-family "Tahoma"
                   :font-size (pt 10))
-            ;;a4 aspect ratio
+            ;; a4 aspect ratio
             
             (rule "#page"
                   :width  1050
-                  :height  1485
-                  :border-style "solid"
-                  (rule "h1"
+                  :height  1485)
+            (rule "h1"
+                  :width (% 40)
+                  (horizontal-space (% 5))
+                  :float "left")
+            (rule "#about"
+                  :width (% 40)
+                  :float "left"
+                  :clear "left"
+                  (horizontal-space (% 5))
+                  (rule "p"
                         nomargin
-                        :width (% 20)
-                        :float "left"))
-
+                        :float "left"
+                        :font-size (pt 8)))
+            (rule "img"
+                  :width (% 15)
+                  (horizontal-space (% 5))
+                  :float "right")
+            
             (rule "#contact"
-                  :float "right"
+                  :float "left"
+                  :width (% 15)
+                  :align "bottom"
+                  (horizontal-space (% 5))
                   (rule "h2"
                         nomargin
                         :float "left"
                         :font-size (pt 8))
                   (rule "p"
-                        nomargin
-                        :float "left"
-                        :font-size (pt 8))
+                        :clear "left"
+                        :font-size (pt 8)
+                        nomargin)
                   (rule ".contactrow"
-                        :clear "both"
-                        :margin "0 0 0 5"))
+                        :margin-top 5
+                        :clear "both"))
             
             (rule "#timeline"
                   :display "table"
                   :width  (% 40)
-                  :margin (% 5)
+                  (horizontal-space (% 5))
                   :float "left"
                   :clear "both"
                   (rule "#lastitem"
                         :border-left-style "none"
                         :position "relative"
-                        :margin-left 10
+                        :margin-left (px 10)
                         timeline-item)
                   (rule ".item"
-                        :border-left  10
+                        :border-left (px 10)
                         :border-left-style "solid"
                         :position "relative"
-                        :padding-bottom  5
+                        :padding-bottom  (% 3)
                         timeline-item))
 
-                        
+            
             (rule "#skills"
                   :width  (% 40)
-                  :margin (% 5)
+                  (horizontal-space (% 5))
                   :float "left"
+
                   (rule ".group"
                         :float "left"
                         :clear "both"
+                        :margin-bottom "10"
+                        :width (% 100)
                         (rule "h3"
                               nomargin
                               :font-size (pt 8))
@@ -103,4 +126,30 @@
                                     :margin 0)
                               (rule "svg"
                                     :float "left"
-                                    :width (% 25)))))))
+                                    :height (% 100)
+                                    :width (% 25)))))
+            (rule "#qualifications"
+                  :width (% 90)
+                  (horizontal-space (% 5))
+                  :float "left"
+                  (rule "h2"
+                        :float "left"
+                        :clear "both")
+                  (rule "#content"
+                        :float "left"
+                        :width (% 100))
+                  (rule ".group"
+                        :float "left"
+                        :width (% 27)
+                        (horizontal-space (% 3)))
+                  (rule "p"
+                        nomargin
+                        :font-size (pt 8)
+                        (rule "&.result"
+                              :color "gray"
+                              :float "right")
+                        (rule "&.qualification"
+                              :float "left"
+                              :margin "0 10 0 0"
+                              :font-weight "bold"
+                              :clear "both")))))

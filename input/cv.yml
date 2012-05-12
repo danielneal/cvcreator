@@ -1,5 +1,12 @@
+
 ---
 name: Daniel Neal
+picture: https://s3-eu-west-1.amazonaws.com/danielneal/danielnealgrayscale.jpg
+about: |
+  Systems developer. I believe that, through the use of computers, people can be freed to become more human. 
+  I enjoy building systems that take away the mundane, and the repetitive. No-one should ever have to enter 
+  the same piece of information twice in two different computer systems. I'm a fast learner, equally capable
+  of working by myself or in a team.
 contact: 
   - method: mobile
     details: 07763 468398
@@ -8,57 +15,92 @@ contact:
   - method: post
     details: 38 Springfield Mill, Sandiacre, Derbyshire, NG10 5QD
 
-locations: 
-  - &1 "Deal, UK"
-  - &2 "Cambridge, UK"
-  - &3 "Lisbon, Portugal"
-  - &4 "London, UK"
-  - &5 "Nottingham, UK"
-  - &6 "Calais, France"
-  - &7 "Canterbury, UK"
-
 timeline: 
   - period: 2009 - 2012
     activity: |
       Worked at EvoEnergy. Joined when the company was 10 people strong, and carried out many roles from on-site installation of monitoring systems, to telephone support, sales and administration
       Following the introduction of the Feed-in Tariff in April 2010, became the company's Systems Developer, taking the information systems from a piece of paper and a whiteboard, to an excel spreadsheet, 
       then an Access Database, then a completely bespoke SQL database with VB.Net and WinForms front end, and finally, with a colleague, to a much
-
   - period: 2008 - 2009
     activity: |
-      Was in Portugal doing a Summer Academy, then at Climate Camp runnning a workshop on Energy Plans that Add up, based on David MacKay's book
-  - period: 2004 - 2008
+      Was in Portugal doing a Summer Academy in Human Centred Systems Design, then developed runnning a workshop on Energy Plans that Add up, based on David MacKay's book "Sustainable Energy Without The Hot Air"
+  - period: 2007 - 2008
+    activity: |
+      Summer work, Cintelliq, consultants to the organic semiconductor industry. Helped with research, and preparing for their yearly conference. 
+  - period: 2004
+    activity: |
+      Summer work. Worked at Stage Technologies as an engineer, drawing circuit diagrams and wiring up drive automation for Cirque du Soleil 
+  - period: 2004 - 2005
     activity: |
       Higher Education
-      Read Engineering at Emmanuel College, Cambridge, and gained
-      a first class degree. Took an unconvential route through the course, studying the Mechanics, Structures, Thermofluids
-    location: *1
-  - period: 1984 - 1996
+      Read Engineering at Emmanuel College, Cambridge, and gained a first class degree. Took an unconvential route through the course, studying general engineering in the first two years 
+      (Mechanics, Structures, Thermofluids, Materials, Linear Systems and Control, Thermofluids, Digital and Analogue Circuits, Electrical Power, Signal and Data Analysis), 
+      then manufacturing engineering in the third year (Design, Industrial Engineering, Accounting and Finance, Human Relations, Organisational Behaviour), 
+      and then doing modules in Renewable Electrical Power, Information Theory and Pattern Recognition, Biomimicry, Sustainable Water Engineering, Design, Sustainable Development and Building Physics.
+      Also was involved in industrial projects including mapping information flows within a hummus factory, writing software to co-ordinate robots. 
+  - period: 2003 - 2004
+    activity: |
+      Took a gap year. Avoided Thailand entirely, and spent the first month or so in a primary school in Calais, helping out as a teaching assistant. Subsequently worked as an assistant to a photographer 
+      at Picture this in Canterbury. Was then employed by Christ Church University as a project co-ordinator, where I researched, wrote and designed a guide book for people who were considering moving to 
+      the Nord Pas de Calais to work
+  - period: 1996 - 2003
     activity: | 
-      Primary and Secondary Education
-      Attended Sir Roger Manwoods School, where I led the school orchestra, played in a string quartet, a jazz band, joined yndi halda, took some GCSEs
-    location: *2
+      Secondary Education
+      Attended Sir Roger Manwoods School, where I learned how to speak French, how to integrate. While I was there, joined the school orchestra as a violinist, played in a string quartet, a jazz band,
   - period: December 1984
-    activity: Born
+    activity: |
+      Born in Margate, Kent. 
 
-  
 skills:
-  - group: development
+  - group: data development
     skills:
-      - skill: WPF
-        ability: 1
-        enjoyment: 2
-  - group: language
-    skills:
-      - skill: French
-        ability: 2
+      - skill: relational database design
+        ability: 5
+        enjoyment: 5
+      - skill: T-SQL programming
+        ability: 5
         enjoyment: 3
-  - group: middleware
+      - skill: entity framework (ORM)
+        ability: 5
+        enjoyment: 2
+
+  - group: middleware development
     skills:
       - skill: clojure
         ability: 3
         enjoyment: 5
       - skill: c#
+        ability: 5
+        enjoyment: 4
+      - skill: PHP
+        ability: 2
+        enjoyment: 1
+      - skill: Processing (Java)
+        ability: 2
+        enjoyment: 2
+  - group: front end development
+    skills: 
+      - skill: WPF
+        ability: 5
+        enjoyment: 4
+      
+  - group: source control
+    skills:
+      - skill: git
+        ability: 3
+        enjoyment: 4
+      - skill: SVN
+        ability: 3
+        enjoyment: 2
+  - group: office skills
+    skills: 
+      - skill: MS Office 
+        ability: 5
+        enjoyment: 1
+
+  - group: language
+    skills:
+      - skill: French
         ability: 2
         enjoyment: 3
   - group: scripting
@@ -66,7 +108,74 @@ skills:
       - skill: DOS batch file
         ability: 4
         enjoyment: 1
- 
+  - group: engineering
+    skills: 
+      - skill: Solidworks/Pro-Engineer
+        ability: 1 
+        enjoyment: 2
+        enjoymenEngineering: Solidworks, Pro-Engineer (3d modelling), EPlan (circuit design)
+  - group: music
+    skills: 
+      - skill: piano playing
+        ability: 5
+        enjoyment: 5
+      - skill: violin playing
+        ability: 5
+        enjoyment: 5
+      - skill: composition
+        ability: 5
+        enjoyment: 5
+      - skill: DAWs (logic pro, ableton)
+        ability: 4
+        enjoyment: 4
 
 
-  
+qualifications:
+  - group: business
+    qualifications:
+    - qualification: Microsoft Dynamics CRM Developer
+      result: 92%
+  - group: higher education
+    qualifications:
+    - qualification: MEng Mechanical Engineering 
+      result: merit
+    - qualification: BA Manufacturing Engineering 
+      result: class I
+  - group: secondary education
+    qualifications:
+    - qualification: Chemistry Advanced Extension
+      result: distinction
+    - qualification: Maths Advanced Extension
+      result: distinction
+    - qualification: Physics Advanced Extension
+      result: distinction
+    - qualification: Economics AS-level
+      result: A
+    - qualification: French A-level
+      result: A
+    - qualification: Maths A-level
+      result: A
+    - qualification: Further Maths A-level
+      result: A
+    - qualification: Physics A-level
+      result: A
+    - qualification: Chemistry A-level
+      result: A
+    - qualification: GCSEs
+      result: 9 A* 1 A
+  - group: musical
+    qualifications:
+    - qualification: Piano performance level
+      result: distinction
+    - qualification: Violin grade 8
+      result: distinction
+  - group: awards
+    qualifications:
+    - qualification: Engineering IB computing prize
+      result: winner
+  - group: other
+    qualifications:
+    - qualification: Duke of Edinborough Award
+      result: bronze
+    - qualification: Young Enterprise Award
+
