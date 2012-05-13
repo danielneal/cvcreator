@@ -4,66 +4,75 @@ body {
   font-size: 10pt;
 }
 #page {
-  width: 1050;
-  height: 1485;
+  width: 1000;
+  height: 1410;
 }
-h1 {
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#header {
+  width: 100%;
+  height: 10%;
+}
+#header h1 {
   width: 40%;
   margin-left: 5%;
   margin-right: 5%;
   float: left;
 }
-#about {
+
+#header #aboutme {
   width: 40%;
-  float: left;
-  clear: left;
+  height: 100%;
   margin-left: 5%;
   margin-right: 5%;
-}
-#about p {
-  margin: 0;
-  padding: 0;
   float: left;
-  font-size: 8pt;
+  clear: both;
 }
-img {
-  width: 15%;
-  margin-left: 5%;
-  margin-right: 5%;
-  float: right;
-}
-#contact {
-  float: left;
-  width: 15%;
-  align: bottom;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-#contact h2 {
+#header #aboutme p {
   margin: 0;
   padding: 0;
   float: left;
   font-size: 8pt;
 }
 
-#contact p {
+#header #contact {
+  float: left;
+  width: 15%;
+  height: 100%;
+  margin-left: 5%;
+}
+#header #contact h2 {
+  margin: 0;
+  padding: 0;
+  float: left;
+  font-size: 8pt;
+}
+
+#header #contact p {
   clear: left;
   font-size: 8pt;
   margin: 0;
   padding: 0;
 }
 
-#contact .contactrow {
+#header #contact .contactrow {
   margin-top: 5;
   clear: both;
 }
+
+#header img {
+  width: 15%;
+  margin-left: 10%;
+  float: left;
+}
 #timeline {
-  display: table;
   width: 40%;
+  height: 50%;
   margin-left: 5%;
   margin-right: 5%;
   float: left;
-  clear: both;
 }
 #timeline #lastitem {
   border-left-style: none;
@@ -71,17 +80,18 @@ img {
   margin-left: 10px;
 }
 #timeline #lastitem .stop {
-  width: 14;
-  height: 14;
-  left: -12;
-  top: -2;
+  width: 16px;
+  height: 16px;
+  left: -13px;
+  top: -8px;
   position: absolute;
 }
 
 #timeline #lastitem h3 {
   position: relative;
   font-size: 10pt;
-  left: 5;
+  top: -8px;
+  left: 10px;
   margin: 0;
 }
 
@@ -90,7 +100,8 @@ img {
   font-weight: normal;
   position: relative;
   margin: 0;
-  left: 5;
+  top: -8px;
+  left: 10px;
 }
 
 #timeline .item {
@@ -100,17 +111,18 @@ img {
   padding-bottom: 3%;
 }
 #timeline .item .stop {
-  width: 14;
-  height: 14;
-  left: -12;
-  top: -2;
+  width: 16px;
+  height: 16px;
+  left: -13px;
+  top: -8px;
   position: absolute;
 }
 
 #timeline .item h3 {
   position: relative;
   font-size: 10pt;
-  left: 5;
+  top: -8px;
+  left: 10px;
   margin: 0;
 }
 
@@ -119,27 +131,49 @@ img {
   font-weight: normal;
   position: relative;
   margin: 0;
-  left: 5;
+  top: -8px;
+  left: 10px;
 }
 #skills {
   width: 40%;
+  height: 50%;
   margin-left: 5%;
   margin-right: 5%;
   float: left;
+  clear: right;
 }
+#skills h3 {
+  margin: 0;
+  padding: 0;
+  width: 60%;
+  float: left;
+  font-size: 10pt;
+}
+
+#skills h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 8pt;
+  width: 20%;
+  float: left;
+}
+
+#skills svg.skilldot {
+  float: left;
+  height: 9;
+  width: 9;
+  margin: 1;
+}
+
 #skills .group {
   float: left;
   clear: both;
   margin-bottom: 10;
   width: 100%;
 }
-#skills .group h3 {
-  margin: 0;
-  padding: 0;
-  font-size: 8pt;
-}
-
 #skills .group .skillrows {
+  float: left;
+  width: 100%;
   border-top-style: solid;
 }
 
@@ -152,24 +186,52 @@ img {
   float: left;
   font-size: 8pt;
   font-weight: normal;
-  width: 50%;
+  width: 60%;
   margin: 0;
 }
 
-#skills .group .skillrow svg {
+#skills .group .skillrow .score {
   float: left;
-  height: 100%;
-  width: 25%;
+  width: 20%;
+}
+
+#skills #skillskey {
+  float: left;
+  width: 100%;
+  margin-top: 5%;
+}
+#skills #skillskey #keyrows {
+  margin-top: 5%;
+}
+
+#skills #skillskey .keyrow {
+  width: 100%;
+  height: 10;
+}
+
+#skills #skillskey p {
+  margin: 0;
+  padding: 0;
+  font-size: 8pt;
+  float: left;
+  width: 20%;
+}
+
+#skills #skillskey .score {
+  float: left;
+  width: 60%;
 }
 #qualifications {
   width: 90%;
+  height: 25%;
+  margin-top: 5%;
   margin-left: 5%;
   margin-right: 5%;
   float: left;
 }
-#qualifications h2 {
-  float: left;
-  clear: both;
+#qualifications h3 {
+  margin: 0;
+  padding: 0;
 }
 
 #qualifications #content {
@@ -180,6 +242,7 @@ img {
 #qualifications .group {
   float: left;
   width: 27%;
+  margin-top: 2%;
   margin-left: 3%;
   margin-right: 3%;
 }
@@ -196,7 +259,27 @@ img {
 
 #qualifications p.qualification {
   float: left;
-  margin: 0 10 0 0;
   font-weight: bold;
   clear: both;
+}
+#aboutcv {
+  width: 90%;
+  height: 5%;
+  margin-top: 5%;
+  float: left;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+#aboutcv p {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  display: inline;
+  float: left;
+  font-size: 8pt;
+}
+
+#aboutcv #title {
+  font-weight: bold;
+  margin-right: 10px;
 }

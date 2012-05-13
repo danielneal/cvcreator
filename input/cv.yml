@@ -2,11 +2,17 @@
 ---
 name: Daniel Neal
 picture: https://s3-eu-west-1.amazonaws.com/danielneal/danielnealgrayscale.jpg
-about: |
-  Systems developer. I believe that, through the use of computers, people can be freed to become more human. 
-  I enjoy building systems that take away the mundane, and the repetitive. No-one should ever have to enter 
-  the same piece of information twice in two different computer systems. I'm a fast learner, equally capable
-  of working by myself or in a team.
+about: 
+  me: |
+    Systems developer. I believe that, through the use of computers, people can be freed to become more human. 
+    I enjoy building systems that take away the mundane, and the repetitive. No-one should ever have to enter 
+    the same piece of information twice in two different computer systems. I'm a fast learner, equally capable
+    of working by myself or in a team.
+  this-cv: |
+    I designed this CV as a programming project and an experiment in the principle of separating information from its representation.
+    The information in the CV is stored in a plain text file, using YAML (a very lightweight markup language). 
+    It is transformed into HTML using the programming language Clojure, and styled with CSS.
+    The source code for the CV is available online at http://www.github.com/
 contact: 
   - method: mobile
     details: 07763 468398
@@ -18,9 +24,10 @@ contact:
 timeline: 
   - period: 2009 - 2012
     activity: |
-      Worked at EvoEnergy. Joined when the company was 10 people strong, and carried out many roles from on-site installation of monitoring systems, to telephone support, sales and administration
-      Following the introduction of the Feed-in Tariff in April 2010, became the company's Systems Developer, taking the information systems from a piece of paper and a whiteboard, to an excel spreadsheet, 
-      then an Access Database, then a completely bespoke SQL database with VB.Net and WinForms front end, and finally, with a colleague, to a much
+      Worked at EvoEnergy. I joined when the company was 10 people strong, and initially carried out a number of roles, including on-site installation of PV monitoring systems, telephone support, sales and 
+      administration. Following the introduction of the feed-in tariff in April 2010, I became the company's Systems Developer. In this role, I rebuilt the information systems completely several times, 
+      taking them from a set of excel spreadsheets, to an Access Database, a SQL database with VB.Net and WinForms front end, and finally, after employing a second developer, to a much richer SQL database
+      application, with a beautiful C# and WPF front end. 
   - period: 2008 - 2009
     activity: |
       Was in Portugal doing a Summer Academy in Human Centred Systems Design, then developed runnning a workshop on Energy Plans that Add up, based on David MacKay's book "Sustainable Energy Without The Hot Air"
@@ -128,6 +135,10 @@ skills:
       - skill: DAWs (logic pro, ableton)
         ability: 4
         enjoyment: 4
+        
+skills-key:
+  ability: [basic, capable, good,  very good, excellent]
+  enjoyment: [rather avoid, don't mind, like, really enjoy, love]
 
 
 qualifications:
@@ -171,7 +182,9 @@ qualifications:
       result: distinction
   - group: awards
     qualifications:
-    - qualification: Engineering IB computing prize
+    - qualification: Strategies for a Sustainable Future, 2008 Poster Prize
+      result: winner
+    - qualification: Cambridge University Engineering Department IB computing prize
       result: winner
   - group: other
     qualifications:

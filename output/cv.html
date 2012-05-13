@@ -4,66 +4,75 @@
   font-size: 10pt;
 }
 #page {
-  width: 1050;
-  height: 1485;
+  width: 1000;
+  height: 1410;
 }
-h1 {
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#header {
+  width: 100%;
+  height: 10%;
+}
+#header h1 {
   width: 40%;
   margin-left: 5%;
   margin-right: 5%;
   float: left;
 }
-#about {
+
+#header #aboutme {
   width: 40%;
-  float: left;
-  clear: left;
+  height: 100%;
   margin-left: 5%;
   margin-right: 5%;
-}
-#about p {
-  margin: 0;
-  padding: 0;
   float: left;
-  font-size: 8pt;
+  clear: both;
 }
-img {
-  width: 15%;
-  margin-left: 5%;
-  margin-right: 5%;
-  float: right;
-}
-#contact {
-  float: left;
-  width: 15%;
-  align: bottom;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-#contact h2 {
+#header #aboutme p {
   margin: 0;
   padding: 0;
   float: left;
   font-size: 8pt;
 }
 
-#contact p {
+#header #contact {
+  float: left;
+  width: 15%;
+  height: 100%;
+  margin-left: 5%;
+}
+#header #contact h2 {
+  margin: 0;
+  padding: 0;
+  float: left;
+  font-size: 8pt;
+}
+
+#header #contact p {
   clear: left;
   font-size: 8pt;
   margin: 0;
   padding: 0;
 }
 
-#contact .contactrow {
+#header #contact .contactrow {
   margin-top: 5;
   clear: both;
 }
+
+#header img {
+  width: 15%;
+  margin-left: 10%;
+  float: left;
+}
 #timeline {
-  display: table;
   width: 40%;
+  height: 50%;
   margin-left: 5%;
   margin-right: 5%;
   float: left;
-  clear: both;
 }
 #timeline #lastitem {
   border-left-style: none;
@@ -71,17 +80,18 @@ img {
   margin-left: 10px;
 }
 #timeline #lastitem .stop {
-  width: 14;
-  height: 14;
-  left: -12;
-  top: -2;
+  width: 16px;
+  height: 16px;
+  left: -13px;
+  top: -8px;
   position: absolute;
 }
 
 #timeline #lastitem h3 {
   position: relative;
   font-size: 10pt;
-  left: 5;
+  top: -8px;
+  left: 10px;
   margin: 0;
 }
 
@@ -90,7 +100,8 @@ img {
   font-weight: normal;
   position: relative;
   margin: 0;
-  left: 5;
+  top: -8px;
+  left: 10px;
 }
 
 #timeline .item {
@@ -100,17 +111,18 @@ img {
   padding-bottom: 3%;
 }
 #timeline .item .stop {
-  width: 14;
-  height: 14;
-  left: -12;
-  top: -2;
+  width: 16px;
+  height: 16px;
+  left: -13px;
+  top: -8px;
   position: absolute;
 }
 
 #timeline .item h3 {
   position: relative;
   font-size: 10pt;
-  left: 5;
+  top: -8px;
+  left: 10px;
   margin: 0;
 }
 
@@ -119,27 +131,49 @@ img {
   font-weight: normal;
   position: relative;
   margin: 0;
-  left: 5;
+  top: -8px;
+  left: 10px;
 }
 #skills {
   width: 40%;
+  height: 50%;
   margin-left: 5%;
   margin-right: 5%;
   float: left;
+  clear: right;
 }
+#skills h3 {
+  margin: 0;
+  padding: 0;
+  width: 60%;
+  float: left;
+  font-size: 10pt;
+}
+
+#skills h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 8pt;
+  width: 20%;
+  float: left;
+}
+
+#skills svg.skilldot {
+  float: left;
+  height: 9;
+  width: 9;
+  margin: 1;
+}
+
 #skills .group {
   float: left;
   clear: both;
   margin-bottom: 10;
   width: 100%;
 }
-#skills .group h3 {
-  margin: 0;
-  padding: 0;
-  font-size: 8pt;
-}
-
 #skills .group .skillrows {
+  float: left;
+  width: 100%;
   border-top-style: solid;
 }
 
@@ -152,24 +186,52 @@ img {
   float: left;
   font-size: 8pt;
   font-weight: normal;
-  width: 50%;
+  width: 60%;
   margin: 0;
 }
 
-#skills .group .skillrow svg {
+#skills .group .skillrow .score {
   float: left;
-  height: 100%;
-  width: 25%;
+  width: 20%;
+}
+
+#skills #skillskey {
+  float: left;
+  width: 100%;
+  margin-top: 5%;
+}
+#skills #skillskey #keyrows {
+  margin-top: 5%;
+}
+
+#skills #skillskey .keyrow {
+  width: 100%;
+  height: 10;
+}
+
+#skills #skillskey p {
+  margin: 0;
+  padding: 0;
+  font-size: 8pt;
+  float: left;
+  width: 20%;
+}
+
+#skills #skillskey .score {
+  float: left;
+  width: 60%;
 }
 #qualifications {
   width: 90%;
+  height: 25%;
+  margin-top: 5%;
   margin-left: 5%;
   margin-right: 5%;
   float: left;
 }
-#qualifications h2 {
-  float: left;
-  clear: both;
+#qualifications h3 {
+  margin: 0;
+  padding: 0;
 }
 
 #qualifications #content {
@@ -180,6 +242,7 @@ img {
 #qualifications .group {
   float: left;
   width: 27%;
+  margin-top: 2%;
   margin-left: 3%;
   margin-right: 3%;
 }
@@ -196,17 +259,38 @@ img {
 
 #qualifications p.qualification {
   float: left;
-  margin: 0 10 0 0;
   font-weight: bold;
   clear: both;
 }
-</style></head><body><div id="page"><h1>Daniel Neal</h1><div id="about"><p>Systems developer. I believe that, through the use of computers, people can be freed to become more human. 
+#aboutcv {
+  width: 90%;
+  height: 5%;
+  margin-top: 5%;
+  float: left;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+#aboutcv p {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  display: inline;
+  float: left;
+  font-size: 8pt;
+}
+
+#aboutcv #title {
+  font-weight: bold;
+  margin-right: 10px;
+}
+</style></head><body><div id="page"><div id="header"><h1>Daniel Neal</h1><div id="aboutme"><p>Systems developer. I believe that, through the use of computers, people can be freed to become more human. 
 I enjoy building systems that take away the mundane, and the repetitive. No-one should ever have to enter 
 the same piece of information twice in two different computer systems. I'm a fast learner, equally capable
 of working by myself or in a team.
-</p></div><img src="https://s3-eu-west-1.amazonaws.com/danielneal/danielnealgrayscale.jpg" /><div id="contact"><div class="contactrow"><h2>mobile</h2><p>07763 468398</p></div><div class="contactrow"><h2>email</h2><p>danielneal2@gmail.com</p></div><div class="contactrow"><h2>post</h2><p>38 Springfield Mill, Sandiacre, Derbyshire, NG10 5QD</p></div></div><div id="timeline"><h2>Timeline<div class="item"><svg class="stop" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" style="stroke-width:2px;stroke:black;fill:#FF0400;" /></svg><h3>2009 - 2012</h3><p>Worked at EvoEnergy. Joined when the company was 10 people strong, and carried out many roles from on-site installation of monitoring systems, to telephone support, sales and administration
-Following the introduction of the Feed-in Tariff in April 2010, became the company's Systems Developer, taking the information systems from a piece of paper and a whiteboard, to an excel spreadsheet, 
-then an Access Database, then a completely bespoke SQL database with VB.Net and WinForms front end, and finally, with a colleague, to a much
+</p></div><div id="contact"><div class="contactrow"><h2>mobile</h2><p>07763 468398</p></div><div class="contactrow"><h2>email</h2><p>danielneal2@gmail.com</p></div><div class="contactrow"><h2>post</h2><p>38 Springfield Mill, Sandiacre, Derbyshire, NG10 5QD</p></div></div><img src="https://s3-eu-west-1.amazonaws.com/danielneal/danielnealgrayscale.jpg" /></div><div id="timeline"><h2>Timeline</h2><div class="item"><svg class="stop" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" style="stroke-width:2px;stroke:black;fill:#FF0400;" /></svg><h3>2009 - 2012</h3><p>Worked at EvoEnergy. I joined when the company was 10 people strong, and initially carried out a number of roles, including on-site installation of PV monitoring systems, telephone support, sales and 
+administration. Following the introduction of the feed-in tariff in April 2010, I became the company's Systems Developer. In this role, I rebuilt the information systems completely several times, 
+taking them from a set of excel spreadsheets, to an Access Database, a SQL database with VB.Net and WinForms front end, and finally, after employing a second developer, to a much richer SQL database
+application, with a beautiful C# and WPF front end. 
 </p></div><div class="item"><svg class="stop" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" style="stroke-width:2px;stroke:black;fill:#FD2320;" /></svg><h3>2008 - 2009</h3><p>Was in Portugal doing a Summer Academy in Human Centred Systems Design, then developed runnning a workshop on Energy Plans that Add up, based on David MacKay's book "Sustainable Energy Without The Hot Air"
 </p></div><div class="item"><svg class="stop" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" style="stroke-width:2px;stroke:black;fill:#FB413F;" /></svg><h3>2007 - 2008</h3><p>Summer work, Cintelliq, consultants to the organic semiconductor industry. Helped with research, and preparing for their yearly conference. 
 </p></div><div class="item"><svg class="stop" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" style="stroke-width:2px;stroke:black;fill:#F95F5E;" /></svg><h3>2004</h3><p>Summer work. Worked at Stage Technologies as an engineer, drawing circuit diagrams and wiring up drive automation for Cirque du Soleil 
@@ -222,4 +306,8 @@ the Nord Pas de Calais to work
 </p></div><div class="item"><svg class="stop" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" style="stroke-width:2px;stroke:black;fill:#F6B8B8;" /></svg><h3>1996 - 2003</h3><p>Secondary Education
 Attended Sir Roger Manwoods School, where I learned how to speak French, how to integrate. While I was there, joined the school orchestra as a violinist, played in a string quartet, a jazz band,
 </p></div><div id="lastitem"><svg class="stop" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" style="stroke-width:2px;stroke:black;fill:#EDDEDE;" /></svg><h3>December 1984</h3><p>Born in Margate, Kent. 
-</p></div></h2></div><div id="skills"><h2>Skills</h2><div class="group"><h3>data development</h3><div class="skillrows"><div class="skillrow"><p>relational database design</p><svg><circle cx="4" cy="4" r="4" style="fill:#D98C8C;" /><circle cx="14" cy="4" r="4" style="fill:#D98C8C;" /><circle cx="24" cy="4" r="4" style="fill:#D98C8C;" /><circle cx="34" cy="4" r="4" style="fill:#D98C8C;" /><circle cx="44" cy="4" r="4" style="fill:#D98C8C;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:#D98C8C;" /><circle cx="14" cy="4" r="4" style="fill:#D98C8C;" /><circle cx="24" cy="4" r="4" style="fill:#D98C8C;" /><circle cx="34" cy="4" r="4" style="fill:#D98C8C;" /><circle cx="44" cy="4" r="4" style="fill:#D98C8C;" /></svg></div><div class="skillrow"><p>T-SQL programming</p><svg><circle cx="4" cy="4" r="4" style="fill:#D98C8C;" /><circle cx="14" cy="4" r="4" style="fill:#D98C8C;" /><circle cx="24" cy="4" r="4" style="fill:#D98C8C;" /><circle cx="34" cy="4" r="4" style="fill:#D98C8C;" /><circle cx="44" cy="4" r="4" style="fill:#D98C8C;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:#D98C8C;" /><circle cx="14" cy="4" r="4" style="fill:#D98C8C;" /><circle cx="24" cy="4" r="4" style="fill:#D98C8C;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg></div><div class="skillrow"><p>entity framework (ORM)</p><svg><circle cx="4" cy="4" r="4" style="fill:#D98C8C;" /><circle cx="14" cy="4" r="4" style="fill:#D98C8C;" /><circle cx="24" cy="4" r="4" style="fill:#D98C8C;" /><circle cx="34" cy="4" r="4" style="fill:#D98C8C;" /><circle cx="44" cy="4" r="4" style="fill:#D98C8C;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:#D98C8C;" /><circle cx="14" cy="4" r="4" style="fill:#D98C8C;" /><circle cx="24" cy="4" r="4" style="fill:lightgray;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg></div></div></div><div class="group"><h3>middleware development</h3><div class="skillrows"><div class="skillrow"><p>clojure</p><svg><circle cx="4" cy="4" r="4" style="fill:#D9BF8C;" /><circle cx="14" cy="4" r="4" style="fill:#D9BF8C;" /><circle cx="24" cy="4" r="4" style="fill:#D9BF8C;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:#D9BF8C;" /><circle cx="14" cy="4" r="4" style="fill:#D9BF8C;" /><circle cx="24" cy="4" r="4" style="fill:#D9BF8C;" /><circle cx="34" cy="4" r="4" style="fill:#D9BF8C;" /><circle cx="44" cy="4" r="4" style="fill:#D9BF8C;" /></svg></div><div class="skillrow"><p>c#</p><svg><circle cx="4" cy="4" r="4" style="fill:#D9BF8C;" /><circle cx="14" cy="4" r="4" style="fill:#D9BF8C;" /><circle cx="24" cy="4" r="4" style="fill:#D9BF8C;" /><circle cx="34" cy="4" r="4" style="fill:#D9BF8C;" /><circle cx="44" cy="4" r="4" style="fill:#D9BF8C;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:#D9BF8C;" /><circle cx="14" cy="4" r="4" style="fill:#D9BF8C;" /><circle cx="24" cy="4" r="4" style="fill:#D9BF8C;" /><circle cx="34" cy="4" r="4" style="fill:#D9BF8C;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg></div><div class="skillrow"><p>PHP</p><svg><circle cx="4" cy="4" r="4" style="fill:#D9BF8C;" /><circle cx="14" cy="4" r="4" style="fill:#D9BF8C;" /><circle cx="24" cy="4" r="4" style="fill:lightgray;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:#D9BF8C;" /><circle cx="14" cy="4" r="4" style="fill:lightgray;" /><circle cx="24" cy="4" r="4" style="fill:lightgray;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg></div><div class="skillrow"><p>Processing (Java)</p><svg><circle cx="4" cy="4" r="4" style="fill:#D9BF8C;" /><circle cx="14" cy="4" r="4" style="fill:#D9BF8C;" /><circle cx="24" cy="4" r="4" style="fill:lightgray;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:#D9BF8C;" /><circle cx="14" cy="4" r="4" style="fill:#D9BF8C;" /><circle cx="24" cy="4" r="4" style="fill:lightgray;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg></div></div></div><div class="group"><h3>front end development</h3><div class="skillrows"><div class="skillrow"><p>WPF</p><svg><circle cx="4" cy="4" r="4" style="fill:#BFD98C;" /><circle cx="14" cy="4" r="4" style="fill:#BFD98C;" /><circle cx="24" cy="4" r="4" style="fill:#BFD98C;" /><circle cx="34" cy="4" r="4" style="fill:#BFD98C;" /><circle cx="44" cy="4" r="4" style="fill:#BFD98C;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:#BFD98C;" /><circle cx="14" cy="4" r="4" style="fill:#BFD98C;" /><circle cx="24" cy="4" r="4" style="fill:#BFD98C;" /><circle cx="34" cy="4" r="4" style="fill:#BFD98C;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg></div></div></div><div class="group"><h3>source control</h3><div class="skillrows"><div class="skillrow"><p>git</p><svg><circle cx="4" cy="4" r="4" style="fill:#8CD98C;" /><circle cx="14" cy="4" r="4" style="fill:#8CD98C;" /><circle cx="24" cy="4" r="4" style="fill:#8CD98C;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:#8CD98C;" /><circle cx="14" cy="4" r="4" style="fill:#8CD98C;" /><circle cx="24" cy="4" r="4" style="fill:#8CD98C;" /><circle cx="34" cy="4" r="4" style="fill:#8CD98C;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg></div><div class="skillrow"><p>SVN</p><svg><circle cx="4" cy="4" r="4" style="fill:#8CD98C;" /><circle cx="14" cy="4" r="4" style="fill:#8CD98C;" /><circle cx="24" cy="4" r="4" style="fill:#8CD98C;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:#8CD98C;" /><circle cx="14" cy="4" r="4" style="fill:#8CD98C;" /><circle cx="24" cy="4" r="4" style="fill:lightgray;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg></div></div></div><div class="group"><h3>office skills</h3><div class="skillrows"><div class="skillrow"><p>MS Office</p><svg><circle cx="4" cy="4" r="4" style="fill:#8CD9BF;" /><circle cx="14" cy="4" r="4" style="fill:#8CD9BF;" /><circle cx="24" cy="4" r="4" style="fill:#8CD9BF;" /><circle cx="34" cy="4" r="4" style="fill:#8CD9BF;" /><circle cx="44" cy="4" r="4" style="fill:#8CD9BF;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:#8CD9BF;" /><circle cx="14" cy="4" r="4" style="fill:lightgray;" /><circle cx="24" cy="4" r="4" style="fill:lightgray;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg></div></div></div><div class="group"><h3>language</h3><div class="skillrows"><div class="skillrow"><p>French</p><svg><circle cx="4" cy="4" r="4" style="fill:#8CBFD9;" /><circle cx="14" cy="4" r="4" style="fill:#8CBFD9;" /><circle cx="24" cy="4" r="4" style="fill:lightgray;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:#8CBFD9;" /><circle cx="14" cy="4" r="4" style="fill:#8CBFD9;" /><circle cx="24" cy="4" r="4" style="fill:#8CBFD9;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg></div></div></div><div class="group"><h3>scripting</h3><div class="skillrows"><div class="skillrow"><p>DOS batch file</p><svg><circle cx="4" cy="4" r="4" style="fill:#8C8CD9;" /><circle cx="14" cy="4" r="4" style="fill:#8C8CD9;" /><circle cx="24" cy="4" r="4" style="fill:#8C8CD9;" /><circle cx="34" cy="4" r="4" style="fill:#8C8CD9;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:#8C8CD9;" /><circle cx="14" cy="4" r="4" style="fill:lightgray;" /><circle cx="24" cy="4" r="4" style="fill:lightgray;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg></div></div></div><div class="group"><h3>engineering</h3><div class="skillrows"><div class="skillrow"><p>Solidworks/Pro-Engineer</p><svg><circle cx="4" cy="4" r="4" style="fill:#BF8CD9;" /><circle cx="14" cy="4" r="4" style="fill:lightgray;" /><circle cx="24" cy="4" r="4" style="fill:lightgray;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:#BF8CD9;" /><circle cx="14" cy="4" r="4" style="fill:#BF8CD9;" /><circle cx="24" cy="4" r="4" style="fill:lightgray;" /><circle cx="34" cy="4" r="4" style="fill:lightgray;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg></div></div></div><div class="group"><h3>music</h3><div class="skillrows"><div class="skillrow"><p>piano playing</p><svg><circle cx="4" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="14" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="24" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="34" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="44" cy="4" r="4" style="fill:#D98CBF;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="14" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="24" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="34" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="44" cy="4" r="4" style="fill:#D98CBF;" /></svg></div><div class="skillrow"><p>violin playing</p><svg><circle cx="4" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="14" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="24" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="34" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="44" cy="4" r="4" style="fill:#D98CBF;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="14" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="24" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="34" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="44" cy="4" r="4" style="fill:#D98CBF;" /></svg></div><div class="skillrow"><p>composition</p><svg><circle cx="4" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="14" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="24" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="34" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="44" cy="4" r="4" style="fill:#D98CBF;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="14" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="24" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="34" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="44" cy="4" r="4" style="fill:#D98CBF;" /></svg></div><div class="skillrow"><p>DAWs (logic pro, ableton)</p><svg><circle cx="4" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="14" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="24" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="34" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg><svg><circle cx="4" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="14" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="24" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="34" cy="4" r="4" style="fill:#D98CBF;" /><circle cx="44" cy="4" r="4" style="fill:lightgray;" /></svg></div></div></div></div><div id="qualifications"><h2>Qualifications</h2><div id="content"><div class="group"><h3>business</h3><div class="qualificationrow"><p class="qualification">Microsoft Dynamics CRM Developer</p><p class="result">92%</p></div></div><div class="group"><h3>higher education</h3><div class="qualificationrow"><p class="qualification">MEng Mechanical Engineering</p><p class="result">merit</p></div><div class="qualificationrow"><p class="qualification">BA Manufacturing Engineering</p><p class="result">class I</p></div></div><div class="group"><h3>secondary education</h3><div class="qualificationrow"><p class="qualification">Chemistry Advanced Extension</p><p class="result">distinction</p></div><div class="qualificationrow"><p class="qualification">Maths Advanced Extension</p><p class="result">distinction</p></div><div class="qualificationrow"><p class="qualification">Physics Advanced Extension</p><p class="result">distinction</p></div><div class="qualificationrow"><p class="qualification">Economics AS-level</p><p class="result">A</p></div><div class="qualificationrow"><p class="qualification">French A-level</p><p class="result">A</p></div><div class="qualificationrow"><p class="qualification">Maths A-level</p><p class="result">A</p></div><div class="qualificationrow"><p class="qualification">Further Maths A-level</p><p class="result">A</p></div><div class="qualificationrow"><p class="qualification">Physics A-level</p><p class="result">A</p></div><div class="qualificationrow"><p class="qualification">Chemistry A-level</p><p class="result">A</p></div><div class="qualificationrow"><p class="qualification">GCSEs</p><p class="result">9 A* 1 A</p></div></div><div class="group"><h3>musical</h3><div class="qualificationrow"><p class="qualification">Piano performance level</p><p class="result">distinction</p></div><div class="qualificationrow"><p class="qualification">Violin grade 8</p><p class="result">distinction</p></div></div><div class="group"><h3>awards</h3><div class="qualificationrow"><p class="qualification">Engineering IB computing prize</p><p class="result">winner</p></div></div><div class="group"><h3>other</h3><div class="qualificationrow"><p class="qualification">Duke of Edinborough Award</p><p class="result">bronze</p></div><div class="qualificationrow"><p class="qualification">Young Enterprise Award</p><p class="result"></p></div></div></div></div></div></body>
+</p></div></div><div id="skills"><h2>Skills</h2><div class="group"><h3>data development</h3><h4>ability</h4><h4>enjoyment</h4><div class="skillrows"><div class="skillrow"><p>relational database design</p><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98C8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98C8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98C8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98C8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98C8C;" /></svg></div><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98C8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98C8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98C8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98C8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98C8C;" /></svg></div></div><div class="skillrow"><p>T-SQL programming</p><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98C8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98C8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98C8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98C8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98C8C;" /></svg></div><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98C8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98C8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98C8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg></div></div><div class="skillrow"><p>entity framework (ORM)</p><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98C8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98C8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98C8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98C8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98C8C;" /></svg></div><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98C8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98C8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg></div></div></div></div><div class="group"><h3>middleware development</h3><div class="skillrows"><div class="skillrow"><p>clojure</p><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D9BF8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D9BF8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D9BF8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg></div><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D9BF8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D9BF8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D9BF8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D9BF8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D9BF8C;" /></svg></div></div><div class="skillrow"><p>c#</p><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D9BF8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D9BF8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D9BF8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D9BF8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D9BF8C;" /></svg></div><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D9BF8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D9BF8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D9BF8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D9BF8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg></div></div><div class="skillrow"><p>PHP</p><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D9BF8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D9BF8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg></div><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D9BF8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg></div></div><div class="skillrow"><p>Processing (Java)</p><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D9BF8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D9BF8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg></div><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D9BF8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D9BF8C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg></div></div></div></div><div class="group"><h3>front end development</h3><div class="skillrows"><div class="skillrow"><p>WPF</p><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#BFD98C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#BFD98C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#BFD98C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#BFD98C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#BFD98C;" /></svg></div><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#BFD98C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#BFD98C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#BFD98C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#BFD98C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg></div></div></div></div><div class="group"><h3>source control</h3><div class="skillrows"><div class="skillrow"><p>git</p><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8CD98C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8CD98C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8CD98C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg></div><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8CD98C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8CD98C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8CD98C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8CD98C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg></div></div><div class="skillrow"><p>SVN</p><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8CD98C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8CD98C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8CD98C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg></div><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8CD98C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8CD98C;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg></div></div></div></div><div class="group"><h3>office skills</h3><div class="skillrows"><div class="skillrow"><p>MS Office</p><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8CD9BF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8CD9BF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8CD9BF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8CD9BF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8CD9BF;" /></svg></div><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8CD9BF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg></div></div></div></div><div class="group"><h3>language</h3><div class="skillrows"><div class="skillrow"><p>French</p><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8CBFD9;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8CBFD9;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg></div><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8CBFD9;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8CBFD9;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8CBFD9;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg></div></div></div></div><div class="group"><h3>scripting</h3><div class="skillrows"><div class="skillrow"><p>DOS batch file</p><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8C8CD9;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8C8CD9;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8C8CD9;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8C8CD9;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg></div><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#8C8CD9;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg></div></div></div></div><div class="group"><h3>engineering</h3><div class="skillrows"><div class="skillrow"><p>Solidworks/Pro-Engineer</p><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#BF8CD9;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg></div><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#BF8CD9;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#BF8CD9;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg></div></div></div></div><div class="group"><h3>music</h3><div class="skillrows"><div class="skillrow"><p>piano playing</p><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg></div><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg></div></div><div class="skillrow"><p>violin playing</p><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg></div><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg></div></div><div class="skillrow"><p>composition</p><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg></div><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg></div></div><div class="skillrow"><p>DAWs (logic pro, ableton)</p><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg></div><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#D98CBF;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg></div></div></div></div><div id="skillskey"><h3>score</h3><h4>ability</h4><h4>enjoyment</h4><div id="keyrows"><div class="keyrow"><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:black;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg></div><p>basic</p><p>rather avoid</p></div><div class="keyrow"><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:black;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:black;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg></div><p>capable</p><p>don't mind</p></div><div class="keyrow"><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:black;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:black;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:black;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg></div><p>good</p><p>like</p></div><div class="keyrow"><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:black;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:black;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:black;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:black;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:#e6e6e6;" /></svg></div><p>very good</p><p>really enjoy</p></div><div class="keyrow"><div class="score"><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:black;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:black;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:black;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:black;" /></svg><svg class="skilldot" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" style="fill:black;" /></svg></div><p>excellent</p><p>love</p></div></div></div></div><div id="qualifications"><h2>Qualifications</h2><div id="content"><div class="group"><h3>business</h3><div class="qualificationrow"><p class="qualification">Microsoft Dynamics CRM Developer</p><p class="result">92%</p></div></div><div class="group"><h3>higher education</h3><div class="qualificationrow"><p class="qualification">MEng Mechanical Engineering</p><p class="result">merit</p></div><div class="qualificationrow"><p class="qualification">BA Manufacturing Engineering</p><p class="result">class I</p></div></div><div class="group"><h3>secondary education</h3><div class="qualificationrow"><p class="qualification">Chemistry Advanced Extension</p><p class="result">distinction</p></div><div class="qualificationrow"><p class="qualification">Maths Advanced Extension</p><p class="result">distinction</p></div><div class="qualificationrow"><p class="qualification">Physics Advanced Extension</p><p class="result">distinction</p></div><div class="qualificationrow"><p class="qualification">Economics AS-level</p><p class="result">A</p></div><div class="qualificationrow"><p class="qualification">French A-level</p><p class="result">A</p></div><div class="qualificationrow"><p class="qualification">Maths A-level</p><p class="result">A</p></div><div class="qualificationrow"><p class="qualification">Further Maths A-level</p><p class="result">A</p></div><div class="qualificationrow"><p class="qualification">Physics A-level</p><p class="result">A</p></div><div class="qualificationrow"><p class="qualification">Chemistry A-level</p><p class="result">A</p></div><div class="qualificationrow"><p class="qualification">GCSEs</p><p class="result">9 A* 1 A</p></div></div><div class="group"><h3>musical</h3><div class="qualificationrow"><p class="qualification">Piano performance level</p><p class="result">distinction</p></div><div class="qualificationrow"><p class="qualification">Violin grade 8</p><p class="result">distinction</p></div></div><div class="group"><h3>awards</h3><div class="qualificationrow"><p class="qualification">Strategies for a Sustainable Future, 2008 Poster Prize</p><p class="result">winner</p></div><div class="qualificationrow"><p class="qualification">Cambridge University Engineering Department IB computing prize</p><p class="result">winner</p></div></div><div class="group"><h3>other</h3><div class="qualificationrow"><p class="qualification">Duke of Edinborough Award</p><p class="result">bronze</p></div><div class="qualificationrow"><p class="qualification">Young Enterprise Award</p><p class="result"></p></div></div></div></div><div id="aboutcv"><p><span id="title">About this CV</span><span id="content">I designed this CV as a programming project and an experiment in the principle of separating information from its representation.
+The information in the CV is stored in a plain text file, using YAML (a very lightweight markup language). 
+It is transformed into HTML using the programming language Clojure, and styled with CSS.
+The source code for the CV is available online at http://www.github.com/
+</span></p></div></div></body>

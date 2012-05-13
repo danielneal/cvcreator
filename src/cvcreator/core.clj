@@ -8,69 +8,72 @@
             [com.evocomputing.colors.palettes.color-brewer :as colour-brewer]
             [com.evocomputing.colors :as colours]))
 
-;; Get the raw data for the cv
 (defn cv-raw [] (slurp "input/cv.yml"))
-(defn cv-data [] (yaml/parse-string (cv-raw)))
 
-(def w3-xhtml "http://www.w3.org/1999/xhtml")
-(def w3-svg "http://www.w3.org/2000/svg")
+(defn cv-data [] (yaml/parse-string (cv-raw)))
 
 (defn timeline [data]
   (let [nt  (count data)
         colours (into [] (core-palettes/heat-hsl nt))]
-    [:div#timeline
-     [:h2 "Timeline"
-      (unify (map-indexed vector data)
-             (fn [[idx {:keys [period location activity last?]}]]
-               [(if (= idx (dec nt)) :div#lastitem :div.item)
-                [:svg.stop {:viewBox "0 0 12 12"} 
-                 [:circle {:cx 6 :cy 6 :r 5
-                           :style (style {:stroke-width 2 :stroke "black" :fill (colours/rgb-hexstr (colours idx))})}]]
-                [:h3 period]
-                [:p activity]]))]]))
+    (unify (map-indexed vector data)
+           (fn [[idx {:keys [period location activity last?]}]]
+             [(if (= idx (dec nt)) :div#lastitem :div.item)
+              [:svg.stop {:viewBox "0 0 12 12"} 
+               [:circle {:cx 6 :cy 6 :r 5
+                         :style (style {:stroke-width 2 :stroke "black" :fill (colours/rgb-hexstr (colours idx))})}]]
+              [:h3 period]
+              [:p activity]]))))
 
-(let [unfilled-color "lightgray"
-      horizontal-spacing 2]
-  (defn make-circles [{:keys [size filled-color number number-filled]}]
-    (let [r (/ size 2)
-          horizontal-separation (+ size horizontal-spacing)]
-      (for [x (range number)]
-        [:circle {:cx (+  r (* horizontal-separation x)) :cy r :r r :style
-                  (style 
-                   (if (< x number-filled)
-                     {:fill filled-color}
-                     {:fill unfilled-color}))}]))))
 
-(defn skill-rows [colour data]
-  (unify data
-         (fn [{:keys [skill ability enjoyment]}]
-           [:div.skillrow 
+(defn make-circles [{:keys [number filled-color number-filled unfilled-colour]
+                     :or {filled-color "#000000" unfilled-colour "#e6e6e6"}}]
+  (for [x (range number)]
+    [:svg.skilldot {:viewBox "0 0 10 10"}
+     [:circle {:cx 5 :cy 5 :r 5 :style
+               (style 
+                (if (< x number-filled)
+                  {:fill filled-color}
+                  {:fill unfilled-colour}))}]]))
+
+(let [highest-score 5]
+  (defn skill-rows [colour data]
+    (unify data
+           (fn [{:keys [skill ability enjoyment]}]
+             [:div.skillrow 
               [:p skill]
-            [:svg 
-             (make-circles {:size 8 :filled-color (colours/rgb-hexstr colour) :number 5 :number-filled ability})]
-            [:svg 
-             (make-circles {:size 8 :filled-color (colours/rgb-hexstr colour) :number 5 :number-filled enjoyment})]])))
+              [:div.score
+               (make-circles {:filled-color (colours/rgb-hexstr colour) :number highest-score :number-filled ability})]
+              [:div.score
+               (make-circles {:filled-color (colours/rgb-hexstr colour) :number highest-score :number-filled enjoyment})]])))
 
-(defn skills [data]
-  (let [ng (count data)
-        colours (into [] (core-palettes/rainbow-hsl ng))]
-    [:div#skills
-     [:h2 "Skills"]
-     (unify (map-indexed vector data)
-            (fn [[idx {:keys [group skills]}]]
-              [:div.group
-               [:h3 group]
-               [:div.skillrows
-                (skill-rows (colours idx) skills)]]))]))
+  (defn skills [data]
+    (let [ng (count data)
+          colours (into [] (core-palettes/rainbow-hsl ng))]
+      (unify (map-indexed vector data)
+             (fn [[idx {:keys [group skills]}]]
+               [:div.group
+                [:h3 group]
+                (if (= idx 0) (html [:h4 "ability"] [:h4 "enjoyment"]))
+                [:div.skillrows
+                 (skill-rows (colours idx) skills)]]))))
 
+  (defn skills-key [data]
+    (unify (map #(hash-map :score %1 :ability %2 :enjoyment %3)
+                (iterate inc 1)
+                (:ability data)
+                (:enjoyment data))
+           (fn [{:keys [score ability enjoyment]}]
+             [:div.keyrow
+              [:div.score (make-circles {:filled-color "black" :number highest-score :number-filled score})]
+              [:p ability]
+              [:p enjoyment]]))))
 
 (defn contact [data]
-  [:div#contact
-   (unify data
-          (fn [{:keys [method details]}]
-            [:div.contactrow
-             [:h2 method]
-             [:p details]]))])  
+  (unify data
+         (fn [{:keys [method details]}]
+           [:div.contactrow
+            [:h2 method]
+            [:p details]])))  
 
 
 (defn qualification-rows [data]
@@ -81,14 +84,11 @@
             [:p.result result]])))
 
 (defn qualifications [data]
-  [:div#qualifications
-   [:h2 "Qualifications"]
-   [:div#content
-    (unify data
-           (fn [{:keys [group qualifications]}]
-             [:div.group
-              [:h3 group]
-              (qualification-rows qualifications)]))]])
+  (unify data
+         (fn [{:keys [group qualifications]}]
+           [:div.group
+            [:h3 group]
+            (qualification-rows qualifications)])))
 
 (defn make-cv [& {:keys [mode] :or {mode "print"}}]
   (do
@@ -100,13 +100,29 @@
              (slurp (str "resources/css/" mode ".css"))]]
            [:body
             [:div#page
-             [:h1 (:name (cv-data))]
-             [:div#about [:p (:about (cv-data))]]
-             [:img {:src (:picture (cv-data))}]
-             (contact (:contact (cv-data)))
-             (timeline (:timeline (cv-data)))
-             (skills (:skills (cv-data)))
-             (qualifications (:qualifications (cv-data)))]]))))
+             [:div#header
+              [:h1 (:name (cv-data))]
+              [:div#aboutme [:p (:me (:about (cv-data)))]]
+              [:div#contact (contact (:contact (cv-data)))]
+              [:img {:src (:picture (cv-data))}]]
+             [:div#timeline
+              [:h2 "Timeline"]
+              (timeline (:timeline (cv-data)))]
+             [:div#skills
+              [:h2 "Skills"]
+              (skills (:skills (cv-data)))
+              [:div#skillskey
+               [:h3 "score"]
+               [:h4 "ability"]
+               [:h4 "enjoyment"]
+               [:div#keyrows
+                (skills-key (:skills-key (cv-data)))]]]
+             [:div#qualifications
+              [:h2 "Qualifications"]
+              [:div#content (qualifications (:qualifications (cv-data)))]]
+             [:div#aboutcv
+              [:p [:span#title "About this CV"]
+               [:span#content (:this-cv (:about (cv-data)))]]]]]))))
 
 
 
