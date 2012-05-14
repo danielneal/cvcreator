@@ -4,29 +4,42 @@ body {
   font-size: 10pt;
 }
 #page {
-  width: 1000;
-  height: 1410;
-}
-h2 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  width: 1200;
 }
 #header {
   width: 100%;
-  height: 10%;
+  position: relative;
 }
-#header h1 {
+#header #title {
+  float: left;
   width: 40%;
   margin-left: 5%;
   margin-right: 5%;
+}
+#header #title #name {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 10px;
   float: left;
+  font-size: 16pt;
+}
+
+#header #title #jobtitle {
+  margin: 0;
+  padding: 0;
+  clear: both;
+  font-size: 10pt;
+  float: left;
+  font-weight: normal;
+  margin-right: 10px;
 }
 
 #header #aboutme {
   width: 40%;
-  height: 100%;
   margin-left: 5%;
   margin-right: 5%;
+  margin-top: 10px;
   float: left;
   clear: both;
 }
@@ -38,10 +51,10 @@ h2 {
 }
 
 #header #contact {
-  float: left;
   width: 15%;
-  height: 100%;
+  float: left;
   margin-left: 5%;
+  margin-right: 10%;
 }
 #header #contact h2 {
   margin: 0;
@@ -58,215 +71,238 @@ h2 {
 }
 
 #header #contact .contactrow {
-  margin-top: 5;
-  clear: both;
+  float: left;
 }
 
 #header img {
-  width: 15%;
-  margin-left: 10%;
   float: left;
+  margin-left: 5%;
+  width: 10%;
 }
-#timeline {
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#column1 {
   width: 40%;
-  height: 50%;
   margin-left: 5%;
   margin-right: 5%;
   float: left;
+  clear: both;
 }
-#timeline #lastitem {
-  border-left-style: none;
-  position: relative;
-  margin-left: 10px;
+#column1 #qualifications {
+  width: 100%;
 }
-#timeline #lastitem .stop {
-  width: 16px;
-  height: 16px;
-  left: -13px;
-  top: -8px;
-  position: absolute;
-}
-
-#timeline #lastitem h3 {
-  position: relative;
-  font-size: 10pt;
-  top: -8px;
-  left: 10px;
-  margin: 0;
-}
-
-#timeline #lastitem p {
-  font-size: 8pt;
-  font-weight: normal;
-  position: relative;
-  margin: 0;
-  top: -8px;
-  left: 10px;
-}
-
-#timeline .item {
-  border-left: 10px;
-  border-left-style: solid;
-  position: relative;
-  padding-bottom: 3%;
-}
-#timeline .item .stop {
-  width: 16px;
-  height: 16px;
-  left: -13px;
-  top: -8px;
-  position: absolute;
-}
-
-#timeline .item h3 {
-  position: relative;
-  font-size: 10pt;
-  top: -8px;
-  left: 10px;
-  margin: 0;
-}
-
-#timeline .item p {
-  font-size: 8pt;
-  font-weight: normal;
-  position: relative;
-  margin: 0;
-  top: -8px;
-  left: 10px;
-}
-#skills {
-  width: 40%;
-  height: 50%;
-  margin-left: 5%;
-  margin-right: 5%;
-  float: left;
-  clear: right;
-}
-#skills h3 {
+#column1 #qualifications h3 {
   margin: 0;
   padding: 0;
-  width: 60%;
+}
+
+#column1 #qualifications #content {
+  float: left;
+  width: 100%;
+}
+
+#column1 #qualifications .group {
+  float: left;
+  margin-top: 10px;
+  width: 100%;
+}
+
+#column1 #qualifications p {
+  margin: 0;
+  padding: 0;
+  font-size: 8pt;
+}
+#column1 #qualifications p.result {
+  color: gray;
+  float: right;
+}
+
+#column1 #qualifications p.qualification {
+  float: left;
+  font-weight: bold;
+  clear: both;
+}
+
+#column1 #skills {
+  width: 100%;
+}
+#column1 #skills h3 {
+  margin: 0;
+  padding: 0;
+  width: 50%;
   float: left;
   font-size: 10pt;
 }
 
-#skills h4 {
+#column1 #skills h4 {
   margin: 0;
   padding: 0;
   font-size: 8pt;
+  float: left;
+}
+#column1 #skills h4.experience {
+  width: 30%;
+}
+
+#column1 #skills h4.enjoyment {
   width: 20%;
-  float: left;
 }
 
-#skills svg.skilldot {
+#column1 #skills svg.skilldot {
   float: left;
   height: 9;
   width: 9;
   margin: 1;
 }
 
-#skills .group {
+#column1 #skills .group {
   float: left;
   clear: both;
-  margin-bottom: 10;
+  margin-bottom: 10px;
   width: 100%;
 }
-#skills .group .skillrows {
+#column1 #skills .group .skillrows {
   float: left;
   width: 100%;
   border-top-style: solid;
 }
 
-#skills .group .skillrow {
+#column1 #skills .group .skillrow {
   height: 10;
   width: 100%;
   clear: both;
 }
-#skills .group .skillrow p {
+#column1 #skills .group .skillrow p {
   float: left;
   font-size: 8pt;
   font-weight: normal;
-  width: 60%;
+  width: 50%;
   margin: 0;
 }
 
-#skills .group .skillrow .score {
+#column1 #skills .group .skillrow .experience {
   float: left;
+  width: 30%;
+}
+
+#column1 #skills .group .skillrow .enjoyment {
+  float: left;
+  text-align: left;
   width: 20%;
 }
 
-#skills #skillskey {
+#column1 #skills #skillskey {
   float: left;
   width: 100%;
-  margin-top: 5%;
+  margin-top: 10px;
 }
-#skills #skillskey #keyrows {
-  margin-top: 5%;
+#column1 #skills #skillskey #keyrows {
+  float: left;
+  width: 100%;
+  margin-top: 10px;
 }
 
-#skills #skillskey .keyrow {
+#column1 #skills #skillskey .keyrow {
   width: 100%;
   height: 10;
 }
 
-#skills #skillskey p {
+#column1 #skills #skillskey p {
   margin: 0;
   padding: 0;
   font-size: 8pt;
   float: left;
+}
+#column1 #skills #skillskey p.experience {
+  width: 30%;
+}
+
+#column1 #skills #skillskey p.enjoyment {
+  float: left;
+  text-align: left;
   width: 20%;
 }
 
-#skills #skillskey .score {
+#column1 #skills #skillskey .score {
   float: left;
-  width: 60%;
+  width: 50%;
 }
-#qualifications {
-  width: 90%;
-  height: 25%;
-  margin-top: 5%;
+#column2 {
+  width: 40%;
   margin-left: 5%;
   margin-right: 5%;
   float: left;
 }
-#qualifications h3 {
-  margin: 0;
-  padding: 0;
-}
-
-#qualifications #content {
-  float: left;
+#column2 #timeline {
   width: 100%;
 }
-
-#qualifications .group {
-  float: left;
-  width: 27%;
-  margin-top: 2%;
-  margin-left: 3%;
-  margin-right: 3%;
+#column2 #timeline #lastitem {
+  border-left-style: none;
+  position: relative;
+  margin-left: 10px;
+}
+#column2 #timeline #lastitem .stop {
+  width: 16px;
+  height: 16px;
+  left: -13px;
+  top: -8px;
+  position: absolute;
 }
 
-#qualifications p {
+#column2 #timeline #lastitem h3 {
+  position: relative;
+  font-size: 10pt;
+  top: -8px;
+  left: 10px;
   margin: 0;
-  padding: 0;
-  font-size: 8pt;
-}
-#qualifications p.result {
-  color: gray;
-  float: right;
 }
 
-#qualifications p.qualification {
-  float: left;
-  font-weight: bold;
-  clear: both;
+#column2 #timeline #lastitem p {
+  font-size: 8pt;
+  font-weight: normal;
+  position: relative;
+  margin: 0;
+  top: -8px;
+  left: 10px;
+}
+
+#column2 #timeline .item {
+  border-left: 10px;
+  border-left-style: solid;
+  position: relative;
+  padding-bottom: 3%;
+}
+#column2 #timeline .item .stop {
+  width: 16px;
+  height: 16px;
+  left: -13px;
+  top: -8px;
+  position: absolute;
+}
+
+#column2 #timeline .item h3 {
+  position: relative;
+  font-size: 10pt;
+  top: -8px;
+  left: 10px;
+  margin: 0;
+}
+
+#column2 #timeline .item p {
+  font-size: 8pt;
+  font-weight: normal;
+  position: relative;
+  margin: 0;
+  top: -8px;
+  left: 10px;
 }
 #aboutcv {
   width: 90%;
-  height: 5%;
-  margin-top: 5%;
   float: left;
+  clear: both;
+  margin: 10px;
   margin-left: 5%;
   margin-right: 5%;
 }

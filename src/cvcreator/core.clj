@@ -38,12 +38,12 @@
 (let [highest-score 5]
   (defn skill-rows [colour data]
     (unify data
-           (fn [{:keys [skill ability enjoyment]}]
+           (fn [{:keys [skill experience enjoyment]}]
              [:div.skillrow 
               [:p skill]
-              [:div.score
-               (make-circles {:filled-color (colours/rgb-hexstr colour) :number highest-score :number-filled ability})]
-              [:div.score
+              [:div.experience
+               (make-circles {:filled-color (colours/rgb-hexstr colour) :number highest-score :number-filled experience})]
+              [:div.enjoyment
                (make-circles {:filled-color (colours/rgb-hexstr colour) :number highest-score :number-filled enjoyment})]])))
 
   (defn skills [data]
@@ -53,20 +53,20 @@
              (fn [[idx {:keys [group skills]}]]
                [:div.group
                 [:h3 group]
-                (if (= idx 0) (html [:h4 "ability"] [:h4 "enjoyment"]))
+                (if (= idx 0) (html [:h4.experience "experience"] [:h4.enjoyment "enjoyment"]))
                 [:div.skillrows
                  (skill-rows (colours idx) skills)]]))))
 
   (defn skills-key [data]
-    (unify (map #(hash-map :score %1 :ability %2 :enjoyment %3)
+    (unify (map #(hash-map :score %1 :experience %2 :enjoyment %3)
                 (iterate inc 1)
-                (:ability data)
+                (:experience data)
                 (:enjoyment data))
-           (fn [{:keys [score ability enjoyment]}]
+           (fn [{:keys [score experience enjoyment]}]
              [:div.keyrow
               [:div.score (make-circles {:filled-color "black" :number highest-score :number-filled score})]
-              [:p ability]
-              [:p enjoyment]]))))
+              [:p.experience experience]
+              [:p.enjoyment enjoyment]]))))
 
 (defn contact [data]
   (unify data
@@ -101,25 +101,30 @@
            [:body
             [:div#page
              [:div#header
-              [:h1 (:name (cv-data))]
+              [:div#title
+               [:h2#name (:name (cv-data))]
+               [:h2#jobtitle (:jobtitle (:about (cv-data)))]]
               [:div#aboutme [:p (:me (:about (cv-data)))]]
               [:div#contact (contact (:contact (cv-data)))]
               [:img {:src (:picture (cv-data))}]]
-             [:div#timeline
-              [:h2 "Timeline"]
-              (timeline (:timeline (cv-data)))]
-             [:div#skills
+             [:div#column1
+              [:div#qualifications
+               [:h2 "Qualifications"]
+               [:div#content (qualifications (:qualifications (cv-data)))]]
+              [:div#skills
               [:h2 "Skills"]
               (skills (:skills (cv-data)))
               [:div#skillskey
                [:h3 "score"]
-               [:h4 "ability"]
-               [:h4 "enjoyment"]
+               [:h4.experience "experience"]
+               [:h4.enjoyment "enjoyment"]
                [:div#keyrows
-                (skills-key (:skills-key (cv-data)))]]]
-             [:div#qualifications
-              [:h2 "Qualifications"]
-              [:div#content (qualifications (:qualifications (cv-data)))]]
+                (skills-key (:skills-key (cv-data)))]]]]
+             [:div#column2
+              [:div#timeline
+               [:h2 "Timeline"]
+               (timeline (:timeline (cv-data)))]]
+             
              [:div#aboutcv
               [:p [:span#title "About this CV"]
                [:span#content (:this-cv (:about (cv-data)))]]]]]))))
