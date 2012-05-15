@@ -65,7 +65,6 @@
             
             (rule "#header"
                   :width (% 100)
-                  :position "relative"
                   (rule "#title"
                         :float "left"
                         :width (% 40)
@@ -112,7 +111,8 @@
                               :font-size (pt 8)
                               nomargin)
                         (rule ".contactrow"
-                              :float "left"))
+                              :float "left"
+                              :clear "both"))
                   
                   (rule "img"
                         :float "left"
@@ -122,124 +122,128 @@
             (rule "h2"
                   :margin-top (px 20)
                   :margin-bottom (px 10))
-
-            (rule "#column1"
+            
+            (rule "#qualifications"
+                  :width  (% 100)
+                  :float "left"
+                  :clear "both"
+                  (rule "h2"
+                        :margin-left (% 5))
+                  (rule "h3"
+                        nomargin)
+                  (rule "#content"
+                        :float "left"
+                        :width (% 100))
+                  (rule ".group"
+                        :float "left"
+                        :margin-top (px 10)
+                        :margin-left (% 5)
+                        :margin-right (% 5)
+                        :width (% 40))
+                  (rule "p"
+                        nomargin
+                        :font-size small-font
+                        (rule "&.result"
+                              :color "gray"
+                              :float "right")
+                        (rule "&.qualification"
+                              :float "left"
+                              :font-weight "bold"
+                              :clear "both")))
+            
+            (rule "#skills"
                   :width  (% 40)
                   :margin-left (% 5)
                   :margin-right (% 5)
                   :float "left"
-                  :clear "both"
-                  (rule "#qualifications"
-                        :width (% 100)
-                        (rule "h3"
-                              nomargin)
-                        (rule "#content"
-                              :float "left"
-                              :width (% 100))
-                        (rule ".group"
-                              :float "left"
-                              :margin-top (px 10)
-                              :width (% 100))
-                        (rule "p"
-                              nomargin
-                              :font-size small-font
-                              (rule "&.result"
-                                    :color "gray"
-                                    :float "right")
-                              (rule "&.qualification"
-                                    :float "left"
-                                    :font-weight "bold"
-                                    :clear "both")))
+                  (rule "h3"
+                        nomargin
+                        :float "left"
+                        :width (% 50))
+                  (rule "h4"
+                        nomargin
+                        :font-size small-font
+                        :float "left"
+                        (rule "&.experience"
+                              :width (% 30))
+                        (rule "&.enjoyment"
+                              :width (% 20)))
+                  (rule "svg.skilldot"
+                        :float "left"
+                        :height 9
+                        :width 9
+                        :margin 1)
                   
-                  (rule "#skills"
+                  (rule ".group"
+                        :float "left"
+                        :clear "both"
+                        :margin-bottom (px 10)
                         :width (% 100)
-                        (rule "h3"
-                              nomargin
-                              :width (% 50)
+                        (rule ".skillrows"
                               :float "left"
-                              :font-size medium-font)
-                        (rule "h4"
+                              :width (% 100)
+                              :border-top-style "solid")
+                        (rule ".skillrow"
+                              :height  10
+                              :width (% 100)
+                              :clear "both"
+                              (rule "p"
+                                    :float "left"
+                                    :font-size small-font
+                                    :font-weight "normal"
+                                    :width (% 50)
+                                    :margin 0)
+                              (rule ".experience"
+                                    :float "left"
+                                    :width (% 30))
+                              (rule ".enjoyment"
+                                    :float "left"
+                                    :text-align "left"
+                                    :width (% 20))))
+                  
+                  (rule "#skillskey"
+                        :float "left"
+                        :width (% 100)
+                        :margin-top (px 10)
+                        (rule "#keyrows"
+                              :float "left"
+                              :width (% 100)
+                              :margin-top (px 10))
+                        (rule ".keyrow"
+                              :width (% 100)
+                              :height 10)
+                        (rule "p"
                               nomargin
                               :font-size small-font
                               :float "left"
                               (rule "&.experience"
                                     :width (% 30))
                               (rule "&.enjoyment"
+                                    :float "left"
+                                    :text-align "left"
                                     :width (% 20)))
-                        (rule "svg.skilldot"
+                        (rule ".score"
                               :float "left"
-                              :height 9
-                              :width 9
-                              :margin 1)
-                        (rule ".group"
-                              :float "left"
-                              :clear "both"
-                              :margin-bottom (px 10)
-                              :width (% 100)
-                              (rule ".skillrows"
-                                    :float "left"
-                                    :width (% 100)
-                                    :border-top-style "solid")
-                              (rule ".skillrow"
-                                    :height  10
-                                    :width (% 100)
-                                    :clear "both"
-                                    (rule "p"
-                                          :float "left"
-                                          :font-size small-font
-                                          :font-weight "normal"
-                                          :width (% 50)
-                                          :margin 0)
-                                    (rule ".experience"
-                                          :float "left"
-                                          :width (% 30))
-                                    (rule ".enjoyment"
-                                          :float "left"
-                                          :text-align "left"
-                                          :width (% 20))))
-                        (rule "#skillskey"
-                              :float "left"
-                              :width (% 100)
-                              :margin-top (px 10)
-                              (rule "#keyrows"
-                                    :float "left"
-                                    :width (% 100)
-                                    :margin-top (px 10))
-                              (rule ".keyrow"
-                                    :width (% 100)
-                                    :height 10)
-                              (rule "p"
-                                    nomargin
-                                    :font-size small-font
-                                    :float "left"
-                                    (rule "&.experience"
-                                          :width (% 30))
-                                    (rule "&.enjoyment"
-                                          :float "left"
-                                          :text-align "left"
-                                          :width (% 20)))
-                              (rule ".score"
-                                    :float "left"
-                                    :width (% 50)))))
-             
-            (rule "#column2"
+                              :width (% 50))))
+            
+            
+            
+            (rule "#timeline"
                   :width  (% 40)
                   :margin-left (% 5)
                   :margin-right (% 5)
                   :float "left"
-                  (rule "#timeline"
-                        :width (% 100)
-                        (rule "#lastitem"
-                              :border-left-style "none"
-                              :position "relative"
-                              :margin-left timeline-width
-                              timeline-item)
-                        (rule ".item"
-                              :border-left timeline-width
-                              :border-left-style "solid"
-                              :position "relative"
-                              :padding-bottom  (% 3)
-                              timeline-item)))
+                  (rule "#lastitem"
+                        :border-left-style "none"
+                        :position "relative"
+                        :margin-left timeline-width
+                        timeline-item)
+                  (rule ".item"
+                        :border-left timeline-width
+                        :border-left-style "solid"
+                        :position "relative"
+                        :padding-bottom  (% 3)
+                        timeline-item))
             
             (rule "#aboutcv"
                   :width (% 90)

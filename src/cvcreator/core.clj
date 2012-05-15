@@ -107,11 +107,8 @@
               [:div#aboutme [:p (:me (:about (cv-data)))]]
               [:div#contact (contact (:contact (cv-data)))]
               [:img {:src (:picture (cv-data))}]]
-             [:div#column1
-              [:div#qualifications
-               [:h2 "Qualifications"]
-               [:div#content (qualifications (:qualifications (cv-data)))]]
-              [:div#skills
+             
+             [:div#skills
               [:h2 "Skills"]
               (skills (:skills (cv-data)))
               [:div#skillskey
@@ -119,12 +116,13 @@
                [:h4.experience "experience"]
                [:h4.enjoyment "enjoyment"]
                [:div#keyrows
-                (skills-key (:skills-key (cv-data)))]]]]
-             [:div#column2
-              [:div#timeline
-               [:h2 "Timeline"]
-               (timeline (:timeline (cv-data)))]]
-             
+                (skills-key (:skills-key (cv-data)))]]]
+             [:div#timeline
+              [:h2 "Timeline"]
+              (timeline (:timeline (cv-data)))]
+             [:div#qualifications
+              [:h2 "Qualifications"]
+              [:div#content (qualifications (:qualifications (cv-data)))]]
              [:div#aboutcv
               [:p [:span#title "About this CV"]
                [:span#content (:this-cv (:about (cv-data)))]]]]]))))

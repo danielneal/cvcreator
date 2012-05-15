@@ -8,7 +8,6 @@ body {
 }
 #header {
   width: 100%;
-  position: relative;
 }
 #header #title {
   float: left;
@@ -72,6 +71,7 @@ body {
 
 #header #contact .contactrow {
   float: left;
+  clear: both;
 }
 
 #header img {
@@ -83,98 +83,100 @@ h2 {
   margin-top: 20px;
   margin-bottom: 10px;
 }
-#column1 {
-  width: 40%;
-  margin-left: 5%;
-  margin-right: 5%;
+#qualifications {
+  width: 100%;
   float: left;
   clear: both;
 }
-#column1 #qualifications {
-  width: 100%;
+#qualifications h2 {
+  margin-left: 5%;
 }
-#column1 #qualifications h3 {
+
+#qualifications h3 {
   margin: 0;
   padding: 0;
 }
 
-#column1 #qualifications #content {
+#qualifications #content {
   float: left;
   width: 100%;
 }
 
-#column1 #qualifications .group {
+#qualifications .group {
   float: left;
   margin-top: 10px;
-  width: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 40%;
 }
 
-#column1 #qualifications p {
+#qualifications p {
   margin: 0;
   padding: 0;
   font-size: 8pt;
 }
-#column1 #qualifications p.result {
+#qualifications p.result {
   color: gray;
   float: right;
 }
 
-#column1 #qualifications p.qualification {
+#qualifications p.qualification {
   float: left;
   font-weight: bold;
   clear: both;
 }
-
-#column1 #skills {
-  width: 100%;
+#skills {
+  width: 40%;
+  margin-left: 5%;
+  margin-right: 5%;
+  float: left;
 }
-#column1 #skills h3 {
+#skills h3 {
   margin: 0;
   padding: 0;
-  width: 50%;
   float: left;
-  font-size: 10pt;
+  width: 50%;
 }
 
-#column1 #skills h4 {
+#skills h4 {
   margin: 0;
   padding: 0;
   font-size: 8pt;
   float: left;
 }
-#column1 #skills h4.experience {
+#skills h4.experience {
   width: 30%;
 }
 
-#column1 #skills h4.enjoyment {
+#skills h4.enjoyment {
   width: 20%;
 }
 
-#column1 #skills svg.skilldot {
+#skills svg.skilldot {
   float: left;
   height: 9;
   width: 9;
   margin: 1;
 }
 
-#column1 #skills .group {
+#skills .group {
   float: left;
   clear: both;
   margin-bottom: 10px;
   width: 100%;
 }
-#column1 #skills .group .skillrows {
+#skills .group .skillrows {
   float: left;
   width: 100%;
   border-top-style: solid;
 }
 
-#column1 #skills .group .skillrow {
+#skills .group .skillrow {
   height: 10;
   width: 100%;
   clear: both;
 }
-#column1 #skills .group .skillrow p {
+#skills .group .skillrow p {
   float: left;
   font-size: 8pt;
   font-weight: normal;
@@ -182,68 +184,65 @@ h2 {
   margin: 0;
 }
 
-#column1 #skills .group .skillrow .experience {
+#skills .group .skillrow .experience {
   float: left;
   width: 30%;
 }
 
-#column1 #skills .group .skillrow .enjoyment {
+#skills .group .skillrow .enjoyment {
   float: left;
   text-align: left;
   width: 20%;
 }
 
-#column1 #skills #skillskey {
+#skills #skillskey {
   float: left;
   width: 100%;
   margin-top: 10px;
 }
-#column1 #skills #skillskey #keyrows {
+#skills #skillskey #keyrows {
   float: left;
   width: 100%;
   margin-top: 10px;
 }
 
-#column1 #skills #skillskey .keyrow {
+#skills #skillskey .keyrow {
   width: 100%;
   height: 10;
 }
 
-#column1 #skills #skillskey p {
+#skills #skillskey p {
   margin: 0;
   padding: 0;
   font-size: 8pt;
   float: left;
 }
-#column1 #skills #skillskey p.experience {
+#skills #skillskey p.experience {
   width: 30%;
 }
 
-#column1 #skills #skillskey p.enjoyment {
+#skills #skillskey p.enjoyment {
   float: left;
   text-align: left;
   width: 20%;
 }
 
-#column1 #skills #skillskey .score {
+#skills #skillskey .score {
   float: left;
   width: 50%;
 }
-#column2 {
+#timeline {
   width: 40%;
   margin-left: 5%;
   margin-right: 5%;
   float: left;
 }
-#column2 #timeline {
-  width: 100%;
-}
-#column2 #timeline #lastitem {
+#timeline #lastitem {
   border-left-style: none;
   position: relative;
   margin-left: 10px;
 }
-#column2 #timeline #lastitem .stop {
+#timeline #lastitem .stop {
   width: 16px;
   height: 16px;
   left: -13px;
@@ -251,7 +250,7 @@ h2 {
   position: absolute;
 }
 
-#column2 #timeline #lastitem h3 {
+#timeline #lastitem h3 {
   position: relative;
   font-size: 10pt;
   top: -8px;
@@ -259,7 +258,7 @@ h2 {
   margin: 0;
 }
 
-#column2 #timeline #lastitem p {
+#timeline #lastitem p {
   font-size: 8pt;
   font-weight: normal;
   position: relative;
@@ -268,13 +267,13 @@ h2 {
   left: 10px;
 }
 
-#column2 #timeline .item {
+#timeline .item {
   border-left: 10px;
   border-left-style: solid;
   position: relative;
   padding-bottom: 3%;
 }
-#column2 #timeline .item .stop {
+#timeline .item .stop {
   width: 16px;
   height: 16px;
   left: -13px;
@@ -282,7 +281,7 @@ h2 {
   position: absolute;
 }
 
-#column2 #timeline .item h3 {
+#timeline .item h3 {
   position: relative;
   font-size: 10pt;
   top: -8px;
@@ -290,7 +289,7 @@ h2 {
   margin: 0;
 }
 
-#column2 #timeline .item p {
+#timeline .item p {
   font-size: 8pt;
   font-weight: normal;
   position: relative;
