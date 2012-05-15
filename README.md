@@ -14,5 +14,5 @@ a styled HTML and CSS file.
 
 ## License
 
-Copyright © 2012 Daniel Neak
+Copyright © 2012 Daniel Neal
 Distributed under the Eclipse Public License, the same as Clojure.
