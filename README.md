@@ -11,6 +11,7 @@ a styled HTML and CSS file.
  - Edit the cv.yml file in the input directory. 
  - Load up a clojure repl.
  - Run the (make-cv) function
+ - Examine the contents of the output directory. 
 
 ## License
 
