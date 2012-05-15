@@ -8,10 +8,10 @@ a styled HTML and CSS file.
 
 ## Usage
 
- - Edit the cv.yml file in the input directory. 
- - Load up a clojure repl.
+ - Edit the cv.yml file in the input directory 
+ - Load up a clojure repl
  - Run the (make-cv) function
- - Examine the contents of the output directory. 
+ - Examine the contents of the output directory
 
 ## License
 
