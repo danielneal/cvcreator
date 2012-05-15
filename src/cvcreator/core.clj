@@ -107,7 +107,7 @@
               [:div#aboutme [:p (:me (:about (cv-data)))]]
               [:div#contact (contact (:contact (cv-data)))]
               [:img {:src (:picture (cv-data))}]]
-             
+
              [:div#skills
               [:h2 "Skills"]
               (skills (:skills (cv-data)))
@@ -119,7 +119,7 @@
                 (skills-key (:skills-key (cv-data)))]]]
              [:div#timeline
               [:h2 "Timeline"]
-              (timeline (:timeline (cv-data)))]
+              (timeline (:timeline (cv-data)))]             
              [:div#qualifications
               [:h2 "Qualifications"]
               [:div#content (qualifications (:qualifications (cv-data)))]]

@@ -17,6 +17,12 @@
    :margin-top x
    :margin-bottom x))
 
+(defn header-margin
+  [& {:keys [additional-top additional-bottom] :or {additional-top (px 0) additional-bottom (px 0)}}]
+  (mixin
+   :margin-top (+ (px 20) additional-top)
+   :margin-bottom (+ (px 10) additional-bottom)))
+
 (def big-font
   (pt 16))
 
@@ -68,6 +74,8 @@
                   (rule "#title"
                         :float "left"
                         :width (% 40)
+                        :margin-bottom (px 30)
+                        :margin-top (px 50)
                         :margin-left (% 5)
                         :margin-right (% 5)
                         (rule "#name"
@@ -120,8 +128,7 @@
                         :width (% 10)))
             
             (rule "h2"
-                  :margin-top (px 20)
-                  :margin-bottom (px 10))
+                  (header-margin))
             
             (rule "#qualifications"
                   :width  (% 100)
@@ -156,6 +163,7 @@
                   :margin-left (% 5)
                   :margin-right (% 5)
                   :float "left"
+                  :clear "both"
                   (rule "h3"
                         nomargin
                         :float "left"
@@ -177,7 +185,7 @@
                   (rule ".group"
                         :float "left"
                         :clear "both"
-                        :margin-bottom (px 10)
+                        :margin-bottom (px 15)
                         :width (% 100)
                         (rule ".skillrows"
                               :float "left"
@@ -233,6 +241,8 @@
                   :margin-left (% 5)
                   :margin-right (% 5)
                   :float "left"
+                  (rule "h2"
+                        (header-margin :additional-bottom (/ stop-size 2)))
                   (rule "#lastitem"
                         :border-left-style "none"
                         :position "relative"
@@ -249,7 +259,8 @@
                   :width (% 90)
                   :float "left"
                   :clear "both"
-                  :margin (px 10)
+                  :margin-top (px 60)
+                  :margin-bottom (px 50)
                   (horizontal-space (% 5))
                   
                   (rule "p"
