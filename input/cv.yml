@@ -1,4 +1,3 @@
-
 ---
 name: Daniel Neal
 picture: https://s3-eu-west-1.amazonaws.com/danielneal/danielnealgrayscale.jpg
@@ -110,8 +109,8 @@ skills:
   - group: source control
     skills:
       - skill: git
-        experience: 3
-        enjoyment: 3
+        experience: 2
+        enjoyment: 4
       - skill: subversion
         experience: 3
         enjoyment: 2
