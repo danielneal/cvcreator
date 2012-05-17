@@ -5,12 +5,7 @@ picture: https://s3-eu-west-1.amazonaws.com/danielneal/danielnealgrayscale.jpg
 about: 
   jobtitle: Systems developer
   me: |
-    I like to design and build systems. Well designed systems have the power to take away the mechanical 
-    and the repetitive, allowing us to focus on the most truly human aspects of our roles. I enjoy 
-    making beautiful things - and I always strive for elegance whether I am writing code, designing interfaces, 
-    or performing music. I have quite a broad range of knowledge, particularly in engineering, 
-    and I'm capable of picking up new skills and concepts very quickly.
-    capable of delivering complex projects on time whether working individually or in a small team of like-minded people. 
+   Well designed systems have the power to take away the mundane and repetitive parts of our lives, whether they drive industrial robots in a widget factory, accounting calculations on a spreadsheet or stock level reporting for an onine superstore. I like to build well designed systems, and am capable of delivering them whether working individually or with a small team of like minded people. I have a broad range of skills and knowledge, but more importantly, pick up new skills and concepts very quickly. And although I always strive for elegance in design and implemention, I recognize when it is pragmatism, rather than perfection, that is called for.  
 
   this-cv: |
     I designed this CV as a programming project and an experiment in the principle of separating information from its representation.
@@ -28,10 +23,12 @@ contact:
 timeline: 
   - period: Autumn 2009 
     activity: |
-      Joined EvoEnergy  when the company was 8 people strong (now ~ 180).  Initially carried out a number of roles from on-site installation of PV monitoring systems to telephone support.
-      Following the introduction of the feed-in tariff, became the company's Systems Developer. In this role, I rebuilt the information systems completely several times, 
-      taking them from a set of excel spreadsheets, to an Access Database, a SQL database with VB.Net and WinForms front end, and finally, after employing a second developer, to a
-      much richer SQL database application, with a C# and WPF front end. 
+      Joined EvoEnergy  when the company was 8 people strong (now ~ 180). 
+      Initially carried out a number of roles ranging from on-site installation of PV monitoring systems to telephone support.
+      Following the introduction of the feed-in tariff, became the company's Systems Developer. 
+      In this role, I rebuilt the information systems completely several times, 
+      taking them from a set of excel spreadsheets, to an Access Database, a SQL database with VB.Net and WinForms front end, 
+      and finally, after employing a second developer, to a much richer SQL database application, with a C# and WPF front end. 
   - period: Summer 2009
     activity: |
       Went to Mafra, Portugal to take part in a Summer Academy in Human Centred Systems Design.
@@ -42,31 +39,35 @@ timeline:
       Biomimicry, Sustainable Water Engineering, Design, Sustainable Development and Building Physics.
   - period: Summer 2008
     activity: |
-      Did a UROP (undergraduate research opportunity). Investigated the mechanical performance of Structural Insulated Panels, and carried out a lifecycle analysis of 
-      papercrete (a building material made from recycled waste paper).
+      Did a UROP (undergraduate research opportunity). Investigated the mechanical performance of Structural Insulated Panels,
+      and carried out a lifecycle analysis of papercrete (a building material made from recycled waste paper).
   - period: Summer 2007
     activity: |
       Worked at Cintelliq, consultants to the organic semiconductor industry. Helped with research, and preparing for their yearly conference.
   - period: Autumn 2006 
     activity: |
-     Specialised in Manufacturing Engineering. The course covered modules in Design, Industrial Engineering, Accounting and Finance, Human Relations and Organisational Behaviour.
-     The course included a number of industrial projects, including mapping information flows within a hummus factory, the design of a foldable Rogowski coil for current measurement, 
+     Specialised in Manufacturing Engineering. 
+     The course covered modules in Design, Industrial Engineering, Accounting and Finance, Human Relations and Organisational Behaviour.
+     It also included a number of interesting industrial projects, 
+     including mapping information flows within a hummus factory, the design of a foldable Rogowski coil for current measurement, 
      and writing software to co-ordinate a robotic manufacturing cell. 
   - period: Summer 2005
     activity: |
-      Worked at Stage Technologies as an engineer, drawing circuit diagrams and wiring up drive automation for stage shows. 
+      Worked at Stage Technologies as an engineer, drawing circuit diagrams and wiring up drive automation for West End stage shows. 
   - period: Autumn 2004
     activity: |
-      Started Engineering at Emmanuel College, Cambridge. This began as a general course, with modules in 
-      Mechanics, Structures, Thermofluids, Materials, Linear Systems and Control, Thermofluids, Digital and Analogue Circuits, Electrical Power, Signal and Data Analysis.
+      Went to Cambridge to read Engineering at Emmanuel College. The first two years of the course provided a general engineering 
+      foundation with  modules in Mechanics, Structures, Thermofluids, Materials, Linear Systems and Control,
+      Thermofluids, Digital and Analogue Circuits, Electrical Power, Signal and Data Analysis.
   - period: Autumn 2003 
     activity: |
       Took a gap year. Spent the first month in a primary school in Calais,  helping out as a teaching assistant. Subsequently worked as an assistant to a photographer 
-      at "Picture This" in Canterbury, Kent. Was then employed by Christ Church University as a project co-ordinator, where I researched, wrote and designed a guide book for people who were
-      considering moving to the Nord Pas de Calais to work.
+      at "Picture This" in Canterbury, Kent. For the rest of the year I was employed by Christ Church University as a project co-ordinator,
+      where I researched, wrote and designed a guide book for people who were considering moving to the Nord Pas-de-Calais to work.
   - period: 1996 
     activity: | 
-      Started secondary school. While I was there, led the school orchestra as a violinist, played in a string quartet and joined the jazz band. 
+      Started secondary school. While I was there, I also led the school orchestra as a violinist, played in a string quartet and 
+      joined the jazz band. 
   - period: December 1984
     activity: |
       Born in Margate. 
@@ -110,8 +111,8 @@ skills:
   - group: source control
     skills:
       - skill: git
-        experience: 3
-        enjoyment: 3
+        experience: 2
+        enjoyment: 4
       - skill: subversion
         experience: 3
         enjoyment: 2
