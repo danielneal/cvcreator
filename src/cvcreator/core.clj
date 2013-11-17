@@ -17,7 +17,7 @@
     (unify (map-indexed vector data)
            (fn [[idx {:keys [period location activity last?]}]]
              [(if (= idx (dec nt)) :div#lastitem :div.item)
-              [:svg.stop {:viewBox "0 0 12 12"} 
+              [:svg.stop {:viewBox "0 0 12 12"}
                [:circle {:cx 6 :cy 6 :r 5
                          :style (style {:stroke-width 2 :stroke "black" :fill (colours/rgb-hexstr (colours idx))})}]]
               [:h3 period]
@@ -29,7 +29,7 @@
   (for [x (range number)]
     [:svg.skilldot {:viewBox "0 0 10 10"}
      [:circle {:cx 5 :cy 5 :r 5 :style
-               (style 
+               (style
                 (if (< x number-filled)
                   {:fill filled-color}
                   {:fill unfilled-colour}))}]]))
@@ -38,7 +38,7 @@
   (defn skill-rows [colour data]
     (unify data
            (fn [{:keys [skill experience enjoyment]}]
-             [:div.skillrow 
+             [:div.skillrow
               [:p skill]
               [:div.experience
                (make-circles {:filled-color (colours/rgb-hexstr colour) :number highest-score :number-filled experience})]
@@ -72,7 +72,7 @@
          (fn [{:keys [method details]}]
            [:div.contactrow
             [:h2 method]
-            [:p details]])))  
+            [:p details]])))
 
 
 (defn qualification-rows [data]
@@ -105,7 +105,6 @@
               [:div#aboutme [:p (:me (:about (cv-data)))]]
               [:div#contact (contact (:contact (cv-data)))]
               [:img {:src (:picture (cv-data))}]]
-
              [:div#skills
               [:h2 "Skills"]
               (skills (:skills (cv-data)))
@@ -117,7 +116,7 @@
                 (skills-key (:skills-key (cv-data)))]]]
              [:div#timeline
               [:h2 "Timeline"]
-              (timeline (:timeline (cv-data)))]             
+              (timeline (:timeline (cv-data)))]
              [:div#qualifications
               [:h2 "Qualifications"]
               [:div#content (qualifications (:qualifications (cv-data)))]]
@@ -125,5 +124,6 @@
               [:p [:span#title "About this CV"]
                [:span#content (:this-cv (:about (cv-data)))]]]]]))))
 
-
-
+(defn make-other-information [data]
+  (unify data
+         (fn [x] [:h3 x])))
