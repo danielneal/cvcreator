@@ -1,13 +1,9 @@
 (ns cvcreator.core
-  (:use hiccup.core hiccup.page)
   (:require [clj-yaml.core :as yaml]
+            [hiccup.core :refer [html]]
             [com.evocomputing.colors.palettes.core :as core-palettes]
             [com.evocomputing.colors.palettes.color-brewer :as colour-brewer]
             [com.evocomputing.colors :as colours]))
-
-(defn cv-raw [] (slurp "input/cv.yml"))
-
-(defn cv-data [] (yaml/parse-string (cv-raw)))
 
 (defn timeline [data]
   (let [nt  (count data)
@@ -89,37 +85,43 @@
   (map (fn [x] [:h3 x])
        data))
 
-(defn make-cv [& {:keys [mode] :or {mode "print"}}]
-  (spit "output/cv.html"
-        (html
-         [:head
-          [:style {:type "text/css"}
-           (slurp (str "resources/css/" mode ".css"))]]
-         [:body
-          [:div#page
-           [:div#header
-            [:div#title
-             [:h2#name (:name (cv-data))]
-             [:h2#jobtitle (:jobtitle (:about (cv-data)))]]
-            [:div#aboutme [:p (:me (:about (cv-data)))]]
-            [:div#contact (contact (:contact (cv-data)))]
-            [:img {:src (:picture (cv-data))}]]
-           [:div#skills
-            [:h2 "Skills"]
-            (skills (:skills (cv-data)))
-            [:div#skillskey
-             [:h3 "score"]
-             [:h4.experience "experience"]
-             [:h4.enjoyment "enjoyment"]
-             [:div#keyrows
-              (skills-key (:skills-key (cv-data)))]]]
-           [:div#timeline
-            [:h2 "Timeline"]
-            (timeline (:timeline (cv-data)))]
-           [:div#qualifications
-            [:h2 "Qualifications"]
-            [:div#content (qualifications (:qualifications (cv-data)))]]
-           [:div#aboutcv
-            [:p [:span#title "About this CV"]
-             [:span#content (:this-cv (:about (cv-data)))]]]]])))
-(make-cv)
+(defn cv->html [cv-data]
+  (html
+   [:head
+    [:style {:type "text/css"} (slurp (str "resources/css/style.css"))]]
+   [:body
+    [:div#page
+     [:div#header
+      [:div#title
+       [:h2#name (:name cv-data)]
+       [:h2#jobtitle (:jobtitle (:about cv-data))]]
+      [:div#aboutme [:p (:me (:about cv-data))]]
+      [:div#contact (contact (:contact cv-data))]
+      [:img {:src (:picture cv-data)}]]
+     [:div#skills
+      [:h2 "Skills"]
+      (skills (:skills cv-data))
+      [:div#skillskey
+       [:h3 "score"]
+       [:h4.experience "experience"]
+       [:h4.enjoyment "enjoyment"]
+       [:div#keyrows
+        (skills-key (:skills-key cv-data))]]]
+     [:div#timeline
+      [:h2 "Timeline"]
+      (timeline (:timeline cv-data))]
+     [:div#qualifications
+      [:h2 "Qualifications"]
+      [:div#content (qualifications (:qualifications cv-data))]]
+     [:div#aboutcv
+      [:p [:span#title "About this CV"]
+       [:span#content (:this-cv (:about cv-data))]]]]]))
+
+(defn write-cv []
+  (->> (slurp "input/cv.yml")
+       (yaml/parse-string)
+       (cv->html)
+       (spit "output/cv.html")))
+
+(write-cv)
+
