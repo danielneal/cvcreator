@@ -7,5 +7,4 @@
                  [clj-yaml "0.3.0-SNAPSHOT"]
                  [com.keminglabs/c2 "0.1.0-beta2"]
                  [hiccup "1.0.0"]
-                 [cssgen "0.2.6"]
                  [com.evocomputing/colors "1.0.0-SNAPSHOT"]])

@@ -3,7 +3,6 @@
         c2.svg)
   (:require [clj-yaml.core :as yaml]
             [c2.scale :as scale]
-            [cvcreator.css :as css]
             [com.evocomputing.colors.palettes.core :as core-palettes]
             [com.evocomputing.colors.palettes.color-brewer :as colour-brewer]
             [com.evocomputing.colors :as colours]))
@@ -92,7 +91,6 @@
 
 (defn make-cv [& {:keys [mode] :or {mode "print"}}]
   (do
-    (css/make-css-file!)
     (spit "output/cv.html"
           (html
            [:head
