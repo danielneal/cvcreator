@@ -2,6 +2,7 @@
 /lib
 /classes
 /checkouts
+output/cv.html
 pom.xml
 .DS_Store
 *.#*
