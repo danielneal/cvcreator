@@ -92,9 +92,9 @@ skills:
       - skill: c#
         experience: 4
         enjoyment: 4
-      - skill: PHP
-        experience: 2
-        enjoyment: 1
+      - skill: ruby, PHP, other OOP languages
+        experience: 1
+        enjoyment: 3
 
   - group: front end development
     skills: 
