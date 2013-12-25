@@ -1,17 +1,17 @@
 ---
 name: Daniel Neal
 picture: https://s3-eu-west-1.amazonaws.com/danielneal/danielnealgrayscale.jpg
-about: 
+about:
   jobtitle: Systems developer
   me: |
-   Well designed systems have the power to take away the mundane and repetitive parts of our lives, whether they drive industrial robots in a widget factory, accounting calculations on a spreadsheet or stock level reporting for an onine superstore. I like to build well designed systems, and am capable of delivering them whether working individually or with a small team of like minded people. I have a broad range of skills and knowledge, but more importantly, pick up new skills and concepts very quickly. And although I always strive for elegance in design and implemention, I recognize when it is pragmatism, rather than perfection, that is called for.  
+   Well designed systems have the power to take away the mundane and repetitive parts of our lives, whether they drive industrial robots in a widget factory, accounting calculations on a spreadsheet or stock level reporting for an onine superstore. I like to build well designed systems, and am capable of delivering them whether working individually or with a small team of like minded people. I have a broad range of skills and knowledge, but more importantly, pick up new skills and concepts very quickly. And although I always strive for elegance in design and implemention, I recognize when it is pragmatism, rather than perfection, that is called for.
 
   this-cv: |
     I designed this CV as a programming project and an experiment in the principle of separating information from its representation.
-    The information in the CV is stored in a plain text file, using YAML (a very lightweight markup language). 
+    The information in the CV is stored in a plain text file, using YAML (a very lightweight markup language).
     It is transformed into HTML using the programming language Clojure, and styled with CSS.
-    The source code for the CV is available online at https://github.com/danielneal/cvcreator. 
-contact: 
+    The source code for the CV is available online at https://github.com/danielneal/cvcreator.
+contact:
   - method: mobile
     details: 07763 468398
   - method: email
@@ -23,14 +23,15 @@ timeline:
   - period: Summer 2013
     activity: |
       Started working remotely for EvoEnergy, with reduced hours.
-      With my newly freed up time, began doing a bit of freelance work, and set about learning a some new skills -
+      With my newly freed up time, began doing a bit of freelance work, and set about learning some new skills -
       most notably Objective-C. I'm working on an iPhone application in collaboration with
       an old university friend of mine.
   - period: Winter 2012
     activity: |
       Continued to work at EvoEnergy. After the feed-in tariff was cut, we needed to cut our costs drastically.
       I oversaw the systems aspect of replacing our (expensive!) 3rd party outsourced warehouse service with a completely in-house alternative.
-      This included deploying off-the-shelf warehouse management software, writing data migration scripts, and integration services with our own in house information system.
+      This included deploying off-the-shelf warehouse management software, writing data migration scripts, and integration services with to connect the
+      new warehouse software to our own in house information system.
   - period: Autumn 2009
     activity: |
       Joined EvoEnergy when the company was 8 people strong.
@@ -43,7 +44,7 @@ timeline:
     activity: |
       Went to Mafra, Portugal to take part in a Summer Academy in Human Centred Systems Design.
       Co-developed an educational workshop, based on David MacKay's book "Sustainable Energy Without The Hot Air".
-  - period: Autumn 2008 
+  - period: Autumn 2008
     activity: |
       Switched to Mechanical Engineering, taking modules in Renewable Electrical Power, Information Theory and Pattern Recognition,
       Biomimicry, Sustainable Water Engineering, Design, Sustainable Development and Building Physics.
@@ -54,33 +55,33 @@ timeline:
   - period: Summer 2007
     activity: |
       Worked at Cintelliq, consultants to the organic semiconductor industry. Helped with research, and preparing for their yearly conference.
-  - period: Autumn 2006 
+  - period: Autumn 2006
     activity: |
-     Specialised in Manufacturing Engineering. 
+     Specialised in Manufacturing Engineering.
      The course covered modules in Design, Industrial Engineering, Accounting and Finance, Human Relations and Organisational Behaviour.
-     It also included a number of interesting industrial projects, 
-     including mapping information flows within a hummus factory, the design of a foldable Rogowski coil for current measurement, 
-     and writing software to co-ordinate a robotic manufacturing cell. 
+     It also included a number of interesting industrial projects,
+     including mapping information flows within a hummus factory, the design of a foldable Rogowski coil for current measurement,
+     and writing software to co-ordinate a robotic manufacturing cell.
   - period: Summer 2005
     activity: |
-      Worked at Stage Technologies as an engineer, drawing circuit diagrams and wiring up drive automation for West End stage shows. 
+      Worked at Stage Technologies as an engineer, drawing circuit diagrams and wiring up drive automation for West End stage shows.
   - period: Autumn 2004
     activity: |
-      Went to Cambridge to read Engineering at Emmanuel College. The first two years of the course provided a general engineering 
+      Went to Cambridge to read Engineering at Emmanuel College. The first two years of the course provided a general engineering
       foundation with  modules in Mechanics, Structures, Thermofluids, Materials, Linear Systems and Control,
       Thermofluids, Digital and Analogue Circuits, Electrical Power, Signal and Data Analysis.
-  - period: Autumn 2003 
+  - period: Autumn 2003
     activity: |
-      Took a gap year. Spent the first month in a primary school in Calais,  helping out as a teaching assistant. Subsequently worked as an assistant to a photographer 
+      Took a gap year. Spent the first month in a primary school in Calais,  helping out as a teaching assistant. Subsequently worked as an assistant to a photographer
       at "Picture This" in Canterbury, Kent. For the rest of the year I was employed by Christ Church University as a project co-ordinator,
       where I researched, wrote and designed a guide book for people who were considering moving to the Nord Pas-de-Calais to work.
-  - period: 1996 
-    activity: | 
-      Started secondary school. While I was there, I also led the school orchestra as a violinist, played in a string quartet and 
-      joined the jazz band. 
+  - period: 1996
+    activity: |
+      Started secondary school. While I was there, I also led the school orchestra as a violinist, played in a string quartet and
+      joined the jazz band.
   - period: December 1984
     activity: |
-      Born in Margate. 
+      Born in Margate.
 
 skills:
   - group: data development
@@ -108,7 +109,7 @@ skills:
         enjoyment: 3
 
   - group: front end development
-    skills: 
+    skills:
       - skill: WPF
         experience: 4
         enjoyment: 4
@@ -127,8 +128,8 @@ skills:
         experience: 3
         enjoyment: 2
   - group: office applications
-    skills: 
-      - skill: MS Office 
+    skills:
+      - skill: MS Office
         experience: 5
         enjoyment: 2
       - skill: Photoshop/InDesign/Illustrator
@@ -151,15 +152,15 @@ skills:
         experience: 4
         enjoyment: 1
   - group: engineering
-    skills: 
+    skills:
       - skill: Solidworks/Pro-Engineer/CAD
-        experience: 1 
+        experience: 1
         enjoyment: 2
       - skill: E-plan/circuit design
         experience: 1
         enjoyment: 1
   - group: music
-    skills: 
+    skills:
       - skill: piano playing
         experience: 5
         enjoyment: 5
@@ -172,7 +173,7 @@ skills:
       - skill: DAWs (logic pro, ableton)
         experience: 2
         enjoyment: 4
-        
+
 skills-key:
   experience: [novice, advanced beginner, competent, proficient, expert]
   enjoyment: [rather avoid, don't mind, like, really enjoy, love]
@@ -184,9 +185,9 @@ qualifications:
       result: 92%
   - group: higher education
     qualifications:
-    - qualification: MEng Mechanical Engineering 
+    - qualification: MEng Mechanical Engineering
       result: merit
-    - qualification: BA Manufacturing Engineering 
+    - qualification: BA Manufacturing Engineering
       result: class I
   - group: secondary education
     qualifications:
@@ -226,5 +227,4 @@ qualifications:
     qualifications:
     - qualification: Duke of Edinborough
       result: bronze
-    - qualification: Young Enterprise 
-
+    - qualification: Young Enterprise
