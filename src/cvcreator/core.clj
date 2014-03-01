@@ -3,7 +3,8 @@
             [hiccup.core :refer [html]]
             [com.evocomputing.colors.palettes.core :as core-palettes]
             [com.evocomputing.colors.palettes.color-brewer :as colour-brewer]
-            [com.evocomputing.colors :as colours]))
+            [com.evocomputing.colors :as colours])
+  (:gen-class))
 
 ;; ----------------------------
 ;;        Timeline
@@ -22,7 +23,6 @@
               [:h3 period]
               [:p activity]])
          (map-indexed vector data))))
-
 
 ;; ----------------------------
 ;;          Skills
@@ -154,9 +154,12 @@
 
 (defn write-cv
   "Read the input .yml file and create the html visualisation"
-  []
-  (->> (slurp "input/cv.yml")
+  [input-file output-file]
+  (->> (slurp input)
        (yaml/parse-string)
        (cv->html)
-       (spit "output/cv.html")))
+       (spit output-file)))
 
+(defn -main
+  [output-file]
+  (write-cv "input/cv.yaml" output-file))
