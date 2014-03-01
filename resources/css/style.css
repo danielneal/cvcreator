@@ -172,6 +172,7 @@ h2 {
   float: left;
   width: 100%;
   border-top-style: solid;
+  padding-top: 2px;
 }
 
 #skills .group .skillrow {
