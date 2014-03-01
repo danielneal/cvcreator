@@ -248,12 +248,12 @@ h2 {
 #timeline #lastitem {
   border-left-style: none;
   position: relative;
-  margin-left: 10px;
+  margin-left: 7px;
 }
 #timeline #lastitem .stop {
   width: 16px;
   height: 16px;
-  left: -13px;
+  left: -11px;
   top: -8px;
   position: absolute;
 }
@@ -276,7 +276,7 @@ h2 {
 }
 
 #timeline .item {
-  border-left: 10px;
+  border-left: 7px;
   border-left-style: solid;
   position: relative;
   padding-bottom: 3%;
@@ -284,7 +284,7 @@ h2 {
 #timeline .item .stop {
   width: 16px;
   height: 16px;
-  left: -13px;
+  left: -11px;
   top: -8px;
   position: absolute;
 }
