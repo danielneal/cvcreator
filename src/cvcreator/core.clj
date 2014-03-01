@@ -3,8 +3,7 @@
             [hiccup.core :refer [html]]
             [com.evocomputing.colors.palettes.core :as core-palettes]
             [com.evocomputing.colors.palettes.color-brewer :as colour-brewer]
-            [com.evocomputing.colors :as colours])
-  (:gen-class))
+            [com.evocomputing.colors :as colours]))
 
 ;; ----------------------------
 ;;        Timeline
@@ -155,11 +154,13 @@
 (defn write-cv
   "Read the input .yml file and create the html visualisation"
   [input-file output-file]
-  (->> (slurp input)
+  (->> (slurp input-file)
        (yaml/parse-string)
        (cv->html)
        (spit output-file)))
 
 (defn -main
-  [output-file]
-  (write-cv "input/cv.yaml" output-file))
+  [& [output-file]]
+  (if output-file
+    (write-cv "input/cv.yml" output-file)
+    (println "Please specify an output file")))
