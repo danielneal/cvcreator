@@ -3,12 +3,15 @@ body {
   font-family: Tahoma,Geneva,sans-serif;
   font-size: 10pt;
 }
+
 #page {
   width: 1200;
 }
+
 #header {
   width: 100%;
 }
+
 #header #title {
   float: left;
   width: 40%;
@@ -17,6 +20,7 @@ body {
   margin-left: 5%;
   margin-right: 5%;
 }
+
 #header #title #name {
   margin-top: 0;
   margin-bottom: 0;
@@ -44,6 +48,7 @@ body {
   float: left;
   clear: both;
 }
+
 #header #aboutme p {
   margin: 0;
   padding: 0;
@@ -57,6 +62,7 @@ body {
   margin-left: 5%;
   margin-right: 10%;
 }
+
 #header #contact h2 {
   margin: 0;
   padding: 0;
@@ -81,18 +87,22 @@ body {
   margin-left: 5%;
   width: 10%;
 }
+
 h2 {
   margin-top: 20px;
   margin-bottom: 10px;
 }
+
 #qualifications {
   width: 100%;
   float: left;
   clear: both;
 }
+
 #qualifications h2 {
   margin-left: 5%;
 }
+
 
 #qualifications h3 {
   margin: 0;
@@ -117,16 +127,19 @@ h2 {
   padding: 0;
   font-size: 8pt;
 }
+
 #qualifications p.result {
   color: gray;
   float: right;
 }
+
 
 #qualifications p.qualification {
   float: left;
   font-weight: bold;
   clear: both;
 }
+
 #skills {
   width: 40%;
   margin-left: 5%;
@@ -134,6 +147,7 @@ h2 {
   float: left;
   clear: both;
 }
+
 #skills h3 {
   margin: 0;
   padding: 0;
@@ -147,6 +161,7 @@ h2 {
   font-size: 8pt;
   float: left;
 }
+
 #skills h4.experience {
   width: 30%;
 }
@@ -168,6 +183,7 @@ h2 {
   margin-bottom: 15px;
   width: 100%;
 }
+
 #skills .group .skillrows {
   float: left;
   width: 100%;
@@ -180,6 +196,7 @@ h2 {
   width: 100%;
   clear: both;
 }
+
 #skills .group .skillrow p {
   float: left;
   font-size: 8pt;
@@ -204,6 +221,7 @@ h2 {
   width: 100%;
   margin-top: 10px;
 }
+
 #skills #skillskey #keyrows {
   float: left;
   width: 100%;
@@ -221,6 +239,7 @@ h2 {
   font-size: 8pt;
   float: left;
 }
+
 #skills #skillskey p.experience {
   width: 30%;
 }
@@ -235,12 +254,14 @@ h2 {
   float: left;
   width: 50%;
 }
+
 #timeline {
   width: 40%;
   margin-left: 5%;
   margin-right: 5%;
   float: left;
 }
+
 #timeline h2 {
   margin-top: 20px;
   margin-bottom: 18px;
@@ -251,6 +272,7 @@ h2 {
   position: relative;
   margin-left: 7px;
 }
+
 #timeline #lastitem .stop {
   width: 16px;
   height: 16px;
@@ -282,6 +304,7 @@ h2 {
   position: relative;
   padding-bottom: 3%;
 }
+
 #timeline .item .stop {
   width: 16px;
   height: 16px;
@@ -306,6 +329,7 @@ h2 {
   top: -8px;
   left: 10px;
 }
+
 #aboutcv {
   width: 90%;
   float: left;
@@ -315,6 +339,7 @@ h2 {
   margin-left: 5%;
   margin-right: 5%;
 }
+
 #aboutcv p {
   margin: 0;
   padding: 0;
