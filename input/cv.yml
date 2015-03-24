@@ -89,17 +89,16 @@ skills:
       - skill: relational database design
         experience: 4
         enjoyment: 5
-      - skill: T-SQL programming
+      - skill: SQL
         experience: 4
-        enjoyment: 3
-      - skill: entity framework (ORM)
+        enjoyment: 4
+      - skill: Datalog / Datomic
         experience: 3
-        enjoyment: 2
-
+        enjoyment: 5
   - group: middleware development
     skills:
       - skill: clojure
-        experience: 3
+        experience: 4
         enjoyment: 5
       - skill: c#
         experience: 4
@@ -122,11 +121,11 @@ skills:
   - group: source control
     skills:
       - skill: git
-        experience: 2
+        experience: 3
         enjoyment: 4
       - skill: subversion
-        experience: 3
-        enjoyment: 2
+        experience: 2
+        enjoyment: 1
   - group: office applications
     skills:
       - skill: MS Office
@@ -135,7 +134,7 @@ skills:
       - skill: Photoshop/InDesign/Illustrator
         experience: 3
         enjoyment: 3
-      - skill: ACT! CRM
+      - skill: ACT! CRM, SugarCRM
         experience: 4
         enjoyment: 1
   - group: language
@@ -143,10 +142,16 @@ skills:
       - skill: French
         experience: 3
         enjoyment: 3
+      - skill: Croatian
+        experience: 1
+        enjoyment: 4
   - group: scripting
     skills:
       - skill: DOS batch file
         experience: 3
+        enjoyment: 2
+      - skill: bash
+        experience: 1
         enjoyment: 2
       - skill: VBA
         experience: 4
@@ -170,7 +175,7 @@ skills:
       - skill: composition
         experience: 4
         enjoyment: 5
-      - skill: DAWs (logic pro, ableton)
+      - skill: DAWs (logic pro, ableton, pro tools)
         experience: 2
         enjoyment: 4
 
