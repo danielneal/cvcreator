@@ -20,12 +20,14 @@ contact:
     details: Flat 1, 11B Norfolk Terrace, Brighton, BN1 3AD
 
 timeline:
+  - period: Summer 2014
+    activity: |
+      Joined Codeface in Brighton working one day a week. Worked on a javascript based phone game for teenagers for alcohol intervention, as well as various ruby on rails web projects. Continued at EvoEnergy, carrying out a customisation and implementation of SugarCRM to replace the existing CRM which had hit some hard limits. I gave some talks at local programmer's groups, including one on making music with Clojure.
+
   - period: Summer 2013
     activity: |
-      Started working remotely for EvoEnergy, with reduced hours.
-      With my newly freed up time, began doing a bit of freelance work, and set about learning some new skills -
-      most notably Objective-C. I'm working on an iPhone application in collaboration with
-      an old university friend of mine.
+      Started working remotely for EvoEnergy, from sunny Dubrovnik. Began doing freelance work, and set about learning some new skills, including Objective C for iPhone development and ClojureScript for web development. Worked on an prototype application for exploring cause-effect relationships between medical conditions. Started learning Croatian.
+
   - period: Winter 2012
     activity: |
       Continued to work at EvoEnergy. After the feed-in tariff was cut, we needed to cut our costs drastically.
